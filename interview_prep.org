@@ -1,0 +1,164 @@
+#+TITLE: Front End Interview Prep
+#+OPTIONS: toc:nil num:2
+* HTML
+** What does a DOCTYPE do?
+*** are optional, but more-or-less required for legacy compatibility reasons. if omitted, browsers may render the page in a way that is imcompatible with some specifications
+**** source: https://html.spec.whatwg.org/multipage/syntax.html#the-doctype
+** How do you serve a page with content in multiple languages?
+*** the lang tag can be used on any element. it should be fed a string containing a valid language tag. the lang tag on the <html> element is the default language for the page
+**** source: https://www.w3.org/International/questions/qa-html-language-declarations
+** What kind of things must you be wary of when design or developing for multilingual sites?
+*** setting the charset correctly. unicode 8 can accomadate many different languages. Make sure the font can handle non-Latin based languages. relative "wordiness" of different languages. direction of writing. date format. culture
+**** source: https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708
+** What are data-attributes good for?
+*** passing data from the dom to scripts. basically gives the html more power in a programming context
+**** source: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-* 
+** Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+*** semantics, connectivity, offline & storage, multimedia, 2d/3d graphics & effects, performance and integration, device access, styling 
+**** source: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+** Describe the difference between a cookie, sessionStorage and localStorage.
+*** Session storage is cleared when the session expires. Cookies = server-side, local storage = client side
+**** source: https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies
+** Describe the difference between <script>, <script async> and <script defer>.
+*** When a browser is loading html and it encounters a script tag, the rendering stops until the execution of the script is done. Async and defer are ways of telling the browser to load the page content before scripts load
+**** source: https://javascript.info/script-async-defer
+** Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+*** The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue. 
+**** source: https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid
+** What is progressive rendering?
+*** Prioritizing loading certain elements of the site first as to give the user the experience of fast loading. Lazy loading, above the fold rendering
+**** source: https://stackoverflow.com/questions/33651166/what-is-progressive-rendering 
+** Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
+*** Provides a set of src’s for an image and the width of the image. It selects the first true option in sizes for the viewport
+**** source: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+** Have you used different HTML templating languages before?
+*** ( way of introducing programming concepts to html, supporting dynamic content ) rails views? 
+* CSS 
+** What is CSS selector specificity and how does it work?
+***  assigns a value to selectors based on how general or specific. ( in order of specificity: type selectors, class selectors, id selectors )
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity 
+** What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+*** Css reset removes all built in browser styling. Normalize tries to standardize across browsers. The latter, because a lot of built in styles are pretty useful. 
+**** source: https://pineco.de/a-brief-about-css-reset-and-normalize/ 
+** Describe Floats and how they work.
+*** Allows an element to float in its container. An image with a float right will appear to the right of text in its container.  
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/float 
+** Describe z-index and how stacking context is formed. 
+*** They determine the order in which stacking elements are rendered. Larger z values are rendered before smaller ones
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/z-index 
+** Describe BFC (Block Formatting Context) and how it works.
+*** a bfc is created by a container thats contents will conform to the box model. Use cases: containing the overflow when a floated element is taller than its containing div. dealing with margin collapsing
+**** source: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context 
+** What are the various clearing techniques and which is appropriate for what context?
+*** Clearing: if two preceding elements are floated left and right, clearing the preceding element makes sure it takes up the space below the two  elements
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/clear
+*** techniques: empty div to clear left and right floated elements. overflow on parent element. using a psuedo element :after the elements that need to be cleared
+**** source: https://css-tricks.com/all-about-floats/ 
+** How would you approach fixing browser-specific styling issues?
+*** Not use unsupported features in a way that adds too much to the presentation, feature queries, writing older css first, then having a feature test, and overrideing the css it the browser passes the feature test. Fallback for css rules: write most supported rule first, then newer css feature. older browsers will just skip a rule that can't be rendered
+**** source: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS 
+** How do you serve your pages for feature-constrained browsers?
+*** making sure the base of it works for any browser / does not contain features that, if broken, compromise useability, rather when working enhance the UX. 
+*** What techniques/processes do you use?
+**** @supports ? 
+** What are the different ways to visually hide content (and make it available only for screen readers)?
+*** Using absolute positioning to hide it off screen
+**** source: https://zellwk.com/blog/hide-content-accessibly/ 
+** Have you ever used a grid system, and if so, what do you prefer?
+** Have you used or implemented media queries or mobile specific layouts/CSS?
+** Are you familiar with styling SVG?
+** Can you give an example of an `@media` property other than `screen`?
+*** all, print, speech
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries 
+** What are some of the "gotchas" for writing efficient CSS?
+*** avoid key selectors( the rightmost selector in a compound selector statement) that match a large number of elements ( because the browser will first match the key selector. the key selector should be a class or an id not a type ). use class and id selectors instead of type selectors. avoid redundancy. no universal selector 
+**** source: https://css-tricks.com/efficiently-rendering-css/ 
+** What are the advantages/disadvantages of using CSS preprocessors?
+*** Advantages: more DRY. nesting. mixins
+*** disadvantages: too much nesting. larger css file. performance. 
+*** source: https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&sh=43a0f54e 
+** How would you implement a web design comp that uses non-standard fonts?
+** Explain how a browser determines what elements match a CSS selector.
+*** Before rendering any content it makes the CSS object model ( CSSOM ) this is a tree structure much like the dom, that the browser combines with the dom to make a render tree. This is basically the element, plus the styles. Layout is next, then paint, where actual pixels show up on the page 
+**** source: https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/ 
+** Describe pseudo-elements and discuss what they are used for.
+*** used after a selector to style only 1 part of the selected element. ex p::first-line will apply to the first line of a p tag. 
+*** use cases: drop caps. inserting content without adding elements to html
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+** Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+*** the box is the aggregate of margin, border, padding, and the content itself surrounding every html element. changing the value of box-sizing. 
+**** content-box: model where width of an element is only the content itself
+**** border-box: model where width of element is content plus padding and border
+*** source: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model 
+** What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+*** width values will include border and padding in their calculation. ex a div width a width of 350 px and border of 10px will produce a div whos content border and padding adds up to 350px
+*** advantages: easier calculations
+** What is the CSS `display` property and can you give a few examples of its use?
+*** one: whether it is block or inline, two: whether its children are grid or flex etc. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+** What's the difference between inline and inline-block?
+*** inline elements do nto respect css rules for width and height.
+**** source: https://alligator.io/css/display-inline-vs-inline-block/
+** What's the difference between the "nth-of-type()" and "nth-child()" selectors?
+*** nth-of-type will only select the nth element of the same type. nth-child will select the nth among sibling elements 
+**** source: https://bitsofco.de/nth-child-vs-nth-of-type/
+** What's the difference between a relative, fixed, absolute and statically positioned element?
+*** static is the default, meaning the element is positioned in the normal flow of the document.  
+*** relative: means the element is positioned relative to its static position, so offset by the top right bottom left values. 
+*** absolute: the element is not placed in the normal document flow. it is placed relative to the closest positioned ancestor, or the containing block. 
+*** fixed: the element is not in the flow of the document. it is relative to either the viewport, or an ancestor with a value of transform, perspective, or filter of something other than none.
+*** source: https://developer.mozilla.org/en-US/docs/Web/CSS/position 
+** What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+** Have you used CSS Grid?
+** Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
+** Have you ever worked with retina graphics? If so, when and what techniques did you use?
+** Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
+*** translate can have performance benefits, since it triggers a render in a different layer than positioning. animations.
+* Javascript
+** Explain event delegation.
+** Explain how `this` works in JavaScript.
+  * Can you give an example of one of the ways that working with `this` has changed in ES6?
+** Explain how prototypal inheritance works.
+** What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  * How would you go about checking for any of these states?
+** What is a closure, and how/why would you use one?
+** What language constructions do you use for iterating over object properties and array items?
+** Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
+** What's a typical use case for anonymous functions?
+** What's the difference between host objects and native objects?
+** Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+** Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+** Can you explain what `Function.call` and `Function.apply` do? What's the notable difference between the two?
+** Explain `Function.prototype.bind`.
+** What's the difference between feature detection, feature inference, and using the UA string?
+** Explain "hoisting".
+** Describe event bubbling.
+** Describe event capturing.
+** What's the difference between an "attribute" and a "property"?
+** What are the pros and cons of extending built-in JavaScript objects?
+** What is the difference between `==` and `===`?
+** Explain the same-origin policy with regards to JavaScript.
+** Why is it called a Ternary operator, what does the word "Ternary" indicate?
+** What is strict mode? What are some of the advantages/disadvantages of using it?
+** What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+** What tools and techniques do you use debugging JavaScript code?
+** Explain the difference between mutable and immutable objects.
+  * What is an example of an immutable object in JavaScript?
+  * What are the pros and cons of immutability?
+  * How can you achieve immutability in your own code?
+** Explain the difference between synchronous and asynchronous functions.
+** What is event loop?
+  * What is the difference between call stack and task queue?
+** What are the differences between variables created using `let`, `var` or `const`?
+** What are the differences between ES6 class and ES5 function constructors?
+** Can you offer a use case for the new arrow `=>` function syntax? How does this new syntax differ from other functions?
+** What advantage is there for using the arrow syntax for a method in a constructor?
+** What is the definition of a higher-order function?
+** Can you give an example for destructuring an object or an array?
+** Can you give an example of generating a string with ES6 Template Literals?
+** Can you give an example of a curry function and why this syntax offers an advantage?
+** What are the benefits of using `spread syntax` and how is it different from `rest syntax`?
+** How can you share code between files?
+** Why you might want to create static class members?
+
+  
