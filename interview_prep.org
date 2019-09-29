@@ -116,12 +116,27 @@
 *** translate can have performance benefits, since it triggers a render in a different layer than positioning. animations.
 * Javascript
 ** Explain event delegation.
+*** Having a parent element listen for all events occurring within it. ex, putting an event listener on a form, and making decisions based on the value of event.target, when the listener fires. 
+**** source: https://javascript.info/event-delegation
 ** Explain how `this` works in JavaScript.
-  * Can you give an example of one of the ways that working with `this` has changed in ES6?
+*** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+*** References the containing object
+*** Can you give an example of one of the ways that working with `this` has changed in ES6?
+**** When used in arrow function, this retains the lexical context where the function was called from 
 ** Explain how prototypal inheritance works.
+*** every object in javascript inherits properties from its prototype. for instance all arrays have the properties of Array.prototype, which inherits from its own prototype. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 ** What's the difference between a variable that is: `null`, `undefined` or undeclared?
-  * How would you go about checking for any of these states?
+*** variables not yet assigned a value have the value undefined. null values must be deliberately assigned to a variable. accessing undeclared ( name doesn't exist in current scope ) variables will result in an error but using type of will return undefined.  
+**** undefined is an object, null is a primitive 
+*** How would you go about checking for any of these states?
+**** typeof checkes for undefined or undeclared. use strict equals to check for null ( null == undefined is true )
+*** source: https://stackoverflow.com/questions/5101948/javascript-checking-for-null-vs-undefined-and-difference-between-and
 ** What is a closure, and how/why would you use one?
+*** a combination of a function and the lexical context where that function was declared. 
+*** having a function that returns a function with some local state saved
+*** use case: use like an object with only one method or to emulate a private method. 
+*** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 ** What language constructions do you use for iterating over object properties and array items?
 ** Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
 ** What's a typical use case for anonymous functions?
