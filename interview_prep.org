@@ -116,49 +116,128 @@
 *** translate can have performance benefits, since it triggers a render in a different layer than positioning. animations.
 * Javascript
 ** Explain event delegation.
+*** Having a parent element listen for all events occurring within it. ex, putting an event listener on a form, and making decisions based on the value of event.target, when the listener fires. 
+**** source: https://javascript.info/event-delegation
 ** Explain how `this` works in JavaScript.
-  * Can you give an example of one of the ways that working with `this` has changed in ES6?
+*** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+*** References the containing object
+*** Can you give an example of one of the ways that working with `this` has changed in ES6?
+**** When used in arrow function, this retains the lexical context where the function was called from 
 ** Explain how prototypal inheritance works.
+*** every object in javascript inherits properties from its prototype. for instance all arrays have the properties of Array.prototype, which inherits from its own prototype. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 ** What's the difference between a variable that is: `null`, `undefined` or undeclared?
-  * How would you go about checking for any of these states?
+*** variables not yet assigned a value have the value undefined. null values must be deliberately assigned to a variable. accessing undeclared ( name doesn't exist in current scope ) variables will result in an error but using type of will return undefined.  
+**** undefined is an object, null is a primitive 
+*** How would you go about checking for any of these states?
+**** typeof checkes for undefined or undeclared. use strict equals to check for null ( null == undefined is true )
+*** source: https://stackoverflow.com/questions/5101948/javascript-checking-for-null-vs-undefined-and-difference-between-and
 ** What is a closure, and how/why would you use one?
+*** a combination of a function and the lexical context where that function was declared. 
+*** having a function that returns a function with some local state saved
+*** use case: use like an object with only one method or to emulate a private method. 
+*** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 ** What language constructions do you use for iterating over object properties and array items?
+*** Map, filter, select, forEach
 ** Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
+*** forEach mutates the array it is called on, and returns undefined. Map returns a new array, leaving the array it was called on unchanged. To maintain function purity
+**** source: https://codeburst.io/javascript-map-vs-foreach-f38111822c0f
 ** What's a typical use case for anonymous functions?
-** What's the difference between host objects and native objects?
+*** passing as arguments to other functions
+**** source: https://www.quora.com/Whats-a-typical-use-case-for-anonymous-functions-in-JavaScript
+** What's the difference between host objects and native objects
+*** native objects are those built in to the ecmascript specification. host objects are those defined by the host environment, ex a browser has window, document, etc.
+**** source: https://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects
 ** Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+*** 1st is function declaration, 2nd is saving result of called function. 3rd, is declaring an instance of a class called Person
 ** Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`
+*** in the first case is a function declaration. the 2nd is a function expression. they enter the scope at different times in the parsing cycle. 
+**** source: https://stackoverflow.com/questions/5142286/two-functions-with-the-same-name-in-javascript-how-can-this-work/5142335#5142335
 ** Can you explain what `Function.call` and `Function.apply` do? What's the notable difference between the two?
+*** Call is property of methods of objects, and takes an instance as an argumnet. it runs the method of the object, in the scope of the instance. Additional arguments can be added, but number of arguments does have to bo known. Apply does the same thing, but the second argument is an array of arguments to pass to the function
+**** source: http://hangar.runway7.net/javascript/difference-call-apply
 ** Explain `Function.prototype.bind`.
+*** returns a function with the given value for this.  Does not call it. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 ** What's the difference between feature detection, feature inference, and using the UA string?
+*** feature detection is testing for a user agent feature, and executing code based on that. feature interference is assuming that if one new browser feature exists, more must exist. this is not recommended. the ua string is a string that a browser sends listing information and available features. this is not a reliable way of testing for features
+**** source: https://stackoverflow.com/questions/20104930/whats-the-difference-between-feature-detection-feature-inference-and-using-th/20105074#20105074
 ** Explain "hoisting".
-** Describe event bubbling.
-** Describe event capturing.
+*** Variable DECLARATIONS, NOT ASSIGNMENTS are moved to the top of the execution context 
+**** source: https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+** Event bubbling vs event capturing.
+*** Two ways of dealing with the situation where an event fires nested in the Dom tree where two event handlers could conceivably react to the event. Bubbling is where it travels up the tree, in that the inner most event handler fires. Capturing is where the outer most one fires, trigger the inner event listener.
+**** source: https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing
 ** What's the difference between an "attribute" and a "property"?
+*** Attributes are what html has. When those attributes enter the html object created in the Dom tree, they become properties of that object. for instance, class is an html attribute and className is the DOM property
+**** source: https://frontarm.com/james-k-nelson/html-vs-dom-attributes/
 ** What are the pros and cons of extending built-in JavaScript objects?
+*** Interfering with inherited properties or methods by having the same name. Adding functionality to objects. 
+**** source: https://stackoverflow.com/questions/8859828/javascript-what-dangers-are-in-extending-array-prototype
 ** What is the difference between `==` and `===`?
+*** Triple equals does not change types, “1” === 1 is false but “1” == 1 is true
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 ** Explain the same-origin policy with regards to JavaScript.
+*** Determines whether two different web pages can interact with each other. They must have the same scheme, host, and port to do so. This stops js from running on one site and effecting the other, if they are not directly related. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
 ** Why is it called a Ternary operator, what does the word "Ternary" indicate?
+*** Syntactic sugar for an if else. the word ternary refers to three parts. a ternary operator has a condition, and two branches for true and false.
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 ** What is strict mode? What are some of the advantages/disadvantages of using it?
+*** strict mode is a flag to instruct the browser to be less lenient and throw errors in certain situations. it dissalows the use of implicit declaration of variables, which may affect an older codebase, but is good in that implicit variables are unclear. 
 ** What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+*** advantages: classes, type checking, new features. 
+*** disadvantages: overhead of webpack or gulp. familiarity with devs.  
+*** source: https://www.quora.com/What-are-some-of-the-advantages-disadvantages-of-writing-JavaScript-code-in-a-language-that-compiles-to-JavaScript
 ** What tools and techniques do you use debugging JavaScript code?
+*** jest, console.log, debugger.
 ** Explain the difference between mutable and immutable objects.
-  * What is an example of an immutable object in JavaScript?
-  * What are the pros and cons of immutability?
-  * How can you achieve immutability in your own code?
+*** What is an example of an immutable object in JavaScript?
+**** React's state
+*** What are the pros and cons of immutability?
+**** makes equality more reliable. muteable data is more performative
+*** How can you achieve immutability in your own code?
+**** use Object.assign to change properties of objects. use map and filter or similar constructs to change arrays. 
+*** source: https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310
 ** Explain the difference between synchronous and asynchronous functions.
+*** Synchronous code stops everything from happened until they return. Async do not
+**** source: https://stackoverflow.com/questions/2035645/when-is-javascript-synchronous
 ** What is event loop?
-  * What is the difference between call stack and task queue?
+*** the browser is basically wating for messages to be produced. messages are produced wneh an event occurs and there is an event listener attached to it. 
+*** What is the difference between call stack and task queue?
+**** the call stack is composed of fucntions that have been called and their associated data. the task queue is a list of messages to be processed
+*** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 ** What are the differences between variables created using `let`, `var` or `const`?
+*** Const is immutable and block-scoped, let is block scoped and muteable. Var is function scoped/ can be global if declared outside of a function. 
+**** source: https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e
 ** What are the differences between ES6 class and ES5 function constructors?
+*** source: https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e
 ** Can you offer a use case for the new arrow `=>` function syntax? How does this new syntax differ from other functions?
+*** before every function had its own this value based on the exectuion contex. arrow functions do not create their own this value. in the construction  of a class, this refers to the instance
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 ** What advantage is there for using the arrow syntax for a method in a constructor?
 ** What is the definition of a higher-order function?
+*** functions that takes a function as an argument, or returns a function
+**** source: https://medium.com/javascript-scene/higher-order-functions-composing-software-5365cf2cbe99
 ** Can you give an example for destructuring an object or an array?
+*** const { butts, } = this.state.props
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 ** Can you give an example of generating a string with ES6 Template Literals?
+*** Var n = 9; str = `number ${n}`
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 ** Can you give an example of a curry function and why this syntax offers an advantage?
+*** breaking a function that takes multiple arguements into a multiple functions that take 1 argument. event handling and async code. 
+**** source: https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe
 ** What are the benefits of using `spread syntax` and how is it different from `rest syntax`?
+*** the spread operator is used to expand the properties of an object. rest is used to collect the remaining elements of an array.
+*** spread: copying arrays, passing seperate elements of an array as function params, adding elements to an existing array.  
+*** rest: functions with dynamic numbers of params.
+*** source: https://scotch.io/bar-talk/javascripts-three-dots-spread-vs-rest-operators543
 ** How can you share code between files?
+*** exports. modules, globals
+**** source: https://stackoverflow.com/questions/31030013/sharing-js-functions-between-files-without-making-them-global-or-attaching-them
 ** Why you might want to create static class members?
+*** To have a method that acts on the class itself, not the instance. Utility functions. 
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
 
   

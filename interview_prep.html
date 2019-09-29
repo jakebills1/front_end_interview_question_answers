@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-29 Sun 15:22 -->
+<!-- 2019-09-30 Mon 10:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Front End Interview Prep</title>
@@ -243,400 +243,989 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Front End Interview Prep</h1>
-<div id="outline-container-org92ea6b7" class="outline-2">
-<h2 id="org92ea6b7"><span class="section-number-2">1</span> HTML</h2>
+<div id="outline-container-org30c15e4" class="outline-2">
+<h2 id="org30c15e4"><span class="section-number-2">1</span> HTML</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4ca7d2f" class="outline-3">
-<h3 id="org4ca7d2f"><span class="section-number-3">1.1</span> What does a DOCTYPE do?</h3>
+<div id="outline-container-org48158a5" class="outline-3">
+<h3 id="org48158a5"><span class="section-number-3">1.1</span> What does a DOCTYPE do?</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org45e004b" class="outline-4">
-<h4 id="org45e004b">are optional, but more-or-less required for legacy compatibility reasons. if omitted, browsers may render the page in a way that is imcompatible with some specifications</h4>
-<div class="outline-text-4" id="text-org45e004b">
+<div id="outline-container-org1c4aa95" class="outline-4">
+<h4 id="org1c4aa95">are optional, but more-or-less required for legacy compatibility reasons. if omitted, browsers may render the page in a way that is imcompatible with some specifications</h4>
+<div class="outline-text-4" id="text-org1c4aa95">
 </div>
 <ul class="org-ul">
-<li><a id="orga47a77b"></a>source: <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">https://html.spec.whatwg.org/multipage/syntax.html#the-doctype</a><br /></li>
+<li><a id="org49f4da3"></a>source: <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">https://html.spec.whatwg.org/multipage/syntax.html#the-doctype</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3f002d1" class="outline-3">
-<h3 id="org3f002d1"><span class="section-number-3">1.2</span> How do you serve a page with content in multiple languages?</h3>
+<div id="outline-container-org1550c84" class="outline-3">
+<h3 id="org1550c84"><span class="section-number-3">1.2</span> How do you serve a page with content in multiple languages?</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org37005a5" class="outline-4">
-<h4 id="org37005a5">the lang tag can be used on any element. it should be fed a string containing a valid language tag. the lang tag on the &lt;html&gt; element is the default language for the page</h4>
-<div class="outline-text-4" id="text-org37005a5">
+<div id="outline-container-orgd6d9e3c" class="outline-4">
+<h4 id="orgd6d9e3c">the lang tag can be used on any element. it should be fed a string containing a valid language tag. the lang tag on the &lt;html&gt; element is the default language for the page</h4>
+<div class="outline-text-4" id="text-orgd6d9e3c">
 </div>
 <ul class="org-ul">
-<li><a id="orgbc4456a"></a>source: <a href="https://www.w3.org/International/questions/qa-html-language-declarations">https://www.w3.org/International/questions/qa-html-language-declarations</a><br /></li>
+<li><a id="orgda61933"></a>source: <a href="https://www.w3.org/International/questions/qa-html-language-declarations">https://www.w3.org/International/questions/qa-html-language-declarations</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga430109" class="outline-3">
-<h3 id="orga430109"><span class="section-number-3">1.3</span> What kind of things must you be wary of when design or developing for multilingual sites?</h3>
+<div id="outline-container-org3724759" class="outline-3">
+<h3 id="org3724759"><span class="section-number-3">1.3</span> What kind of things must you be wary of when design or developing for multilingual sites?</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org033b222" class="outline-4">
-<h4 id="org033b222">setting the charset correctly. unicode 8 can accomadate many different languages. Make sure the font can handle non-Latin based languages. relative "wordiness" of different languages. direction of writing. date format. culture</h4>
-<div class="outline-text-4" id="text-org033b222">
+<div id="outline-container-org9c4e9cb" class="outline-4">
+<h4 id="org9c4e9cb">setting the charset correctly. unicode 8 can accomadate many different languages. Make sure the font can handle non-Latin based languages. relative "wordiness" of different languages. direction of writing. date format. culture</h4>
+<div class="outline-text-4" id="text-org9c4e9cb">
 </div>
 <ul class="org-ul">
-<li><a id="orgdcde552"></a>source: <a href="https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708">https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708</a><br /></li>
+<li><a id="org5ef1764"></a>source: <a href="https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708">https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org28741c1" class="outline-3">
-<h3 id="org28741c1"><span class="section-number-3">1.4</span> What are data-attributes good for?</h3>
+<div id="outline-container-org695da4f" class="outline-3">
+<h3 id="org695da4f"><span class="section-number-3">1.4</span> What are data-attributes good for?</h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<div id="outline-container-orgbf88554" class="outline-4">
-<h4 id="orgbf88554">passing data from the dom to scripts. basically gives the html more power in a programming context</h4>
-<div class="outline-text-4" id="text-orgbf88554">
+<div id="outline-container-org17eb678" class="outline-4">
+<h4 id="org17eb678">passing data from the dom to scripts. basically gives the html more power in a programming context</h4>
+<div class="outline-text-4" id="text-org17eb678">
 </div>
 <ul class="org-ul">
-<li><a id="org4f35a24"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data</a>-*<br /></li>
+<li><a id="org72714d2"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data</a>-*<br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org996e1c0" class="outline-3">
-<h3 id="org996e1c0"><span class="section-number-3">1.5</span> Consider HTML5 as an open web platform. What are the building blocks of HTML5?</h3>
+<div id="outline-container-orgfa061da" class="outline-3">
+<h3 id="orgfa061da"><span class="section-number-3">1.5</span> Consider HTML5 as an open web platform. What are the building blocks of HTML5?</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-orgd3aec6d" class="outline-4">
-<h4 id="orgd3aec6d">semantics, connectivity, offline &amp; storage, multimedia, 2d/3d graphics &amp; effects, performance and integration, device access, styling</h4>
-<div class="outline-text-4" id="text-orgd3aec6d">
+<div id="outline-container-org6173997" class="outline-4">
+<h4 id="org6173997">semantics, connectivity, offline &amp; storage, multimedia, 2d/3d graphics &amp; effects, performance and integration, device access, styling</h4>
+<div class="outline-text-4" id="text-org6173997">
 </div>
 <ul class="org-ul">
-<li><a id="org300d1f6"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5</a><br /></li>
+<li><a id="org396c58a"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org184585a" class="outline-3">
-<h3 id="org184585a"><span class="section-number-3">1.6</span> Describe the difference between a cookie, sessionStorage and localStorage.</h3>
+<div id="outline-container-orge59171f" class="outline-3">
+<h3 id="orge59171f"><span class="section-number-3">1.6</span> Describe the difference between a cookie, sessionStorage and localStorage.</h3>
 <div class="outline-text-3" id="text-1-6">
 </div>
-<div id="outline-container-orgf5dc07e" class="outline-4">
-<h4 id="orgf5dc07e">Session storage is cleared when the session expires. Cookies = server-side, local storage = client side</h4>
-<div class="outline-text-4" id="text-orgf5dc07e">
+<div id="outline-container-org761320a" class="outline-4">
+<h4 id="org761320a">Session storage is cleared when the session expires. Cookies = server-side, local storage = client side</h4>
+<div class="outline-text-4" id="text-org761320a">
 </div>
 <ul class="org-ul">
-<li><a id="orgf0b41f5"></a>source: <a href="https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies">https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies</a><br /></li>
+<li><a id="org53cc88c"></a>source: <a href="https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies">https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga7e54fa" class="outline-3">
-<h3 id="orga7e54fa"><span class="section-number-3">1.7</span> Describe the difference between &lt;script&gt;, &lt;script async&gt; and &lt;script defer&gt;.</h3>
+<div id="outline-container-orgca8bc3a" class="outline-3">
+<h3 id="orgca8bc3a"><span class="section-number-3">1.7</span> Describe the difference between &lt;script&gt;, &lt;script async&gt; and &lt;script defer&gt;.</h3>
 <div class="outline-text-3" id="text-1-7">
 </div>
-<div id="outline-container-org1812d4a" class="outline-4">
-<h4 id="org1812d4a">When a browser is loading html and it encounters a script tag, the rendering stops until the execution of the script is done. Async and defer are ways of telling the browser to load the page content before scripts load</h4>
-<div class="outline-text-4" id="text-org1812d4a">
+<div id="outline-container-orga112999" class="outline-4">
+<h4 id="orga112999">When a browser is loading html and it encounters a script tag, the rendering stops until the execution of the script is done. Async and defer are ways of telling the browser to load the page content before scripts load</h4>
+<div class="outline-text-4" id="text-orga112999">
 </div>
 <ul class="org-ul">
-<li><a id="orgb412c27"></a>source: <a href="https://javascript.info/script-async-defer">https://javascript.info/script-async-defer</a><br /></li>
+<li><a id="orgc8a6d8a"></a>source: <a href="https://javascript.info/script-async-defer">https://javascript.info/script-async-defer</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1d1edfa" class="outline-3">
-<h3 id="org1d1edfa"><span class="section-number-3">1.8</span> Why is it generally a good idea to position CSS &lt;link&gt;s between &lt;head&gt;&lt;/head&gt; and JS &lt;script&gt;s just before &lt;/body&gt;? Do you know any exceptions?</h3>
+<div id="outline-container-orgfcae61f" class="outline-3">
+<h3 id="orgfcae61f"><span class="section-number-3">1.8</span> Why is it generally a good idea to position CSS &lt;link&gt;s between &lt;head&gt;&lt;/head&gt; and JS &lt;script&gt;s just before &lt;/body&gt;? Do you know any exceptions?</h3>
 <div class="outline-text-3" id="text-1-8">
 </div>
-<div id="outline-container-org40d9324" class="outline-4">
-<h4 id="org40d9324">The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue.</h4>
-<div class="outline-text-4" id="text-org40d9324">
+<div id="outline-container-org3a97bd3" class="outline-4">
+<h4 id="org3a97bd3">The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue.</h4>
+<div class="outline-text-4" id="text-org3a97bd3">
 </div>
 <ul class="org-ul">
-<li><a id="orgb20e80a"></a>source: <a href="https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid">https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid</a><br /></li>
+<li><a id="org82f1a0f"></a>source: <a href="https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid">https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf53466f" class="outline-3">
-<h3 id="orgf53466f"><span class="section-number-3">1.9</span> What is progressive rendering?</h3>
+<div id="outline-container-orgccff050" class="outline-3">
+<h3 id="orgccff050"><span class="section-number-3">1.9</span> What is progressive rendering?</h3>
 <div class="outline-text-3" id="text-1-9">
 </div>
-<div id="outline-container-org9d84cb2" class="outline-4">
-<h4 id="org9d84cb2">Prioritizing loading certain elements of the site first as to give the user the experience of fast loading. Lazy loading, above the fold rendering</h4>
-<div class="outline-text-4" id="text-org9d84cb2">
+<div id="outline-container-orgbb9e9d1" class="outline-4">
+<h4 id="orgbb9e9d1">Prioritizing loading certain elements of the site first as to give the user the experience of fast loading. Lazy loading, above the fold rendering</h4>
+<div class="outline-text-4" id="text-orgbb9e9d1">
 </div>
 <ul class="org-ul">
-<li><a id="org4b7a76f"></a>source: <a href="https://stackoverflow.com/questions/33651166/what-is-progressive-rendering">https://stackoverflow.com/questions/33651166/what-is-progressive-rendering</a><br /></li>
+<li><a id="orgc164034"></a>source: <a href="https://stackoverflow.com/questions/33651166/what-is-progressive-rendering">https://stackoverflow.com/questions/33651166/what-is-progressive-rendering</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgba5e489" class="outline-3">
-<h3 id="orgba5e489"><span class="section-number-3">1.10</span> Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.</h3>
+<div id="outline-container-org5b17c92" class="outline-3">
+<h3 id="org5b17c92"><span class="section-number-3">1.10</span> Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.</h3>
 <div class="outline-text-3" id="text-1-10">
 </div>
-<div id="outline-container-org55700c1" class="outline-4">
-<h4 id="org55700c1">Provides a set of src’s for an image and the width of the image. It selects the first true option in sizes for the viewport</h4>
-<div class="outline-text-4" id="text-org55700c1">
+<div id="outline-container-org371c541" class="outline-4">
+<h4 id="org371c541">Provides a set of src’s for an image and the width of the image. It selects the first true option in sizes for the viewport</h4>
+<div class="outline-text-4" id="text-org371c541">
 </div>
 <ul class="org-ul">
-<li><a id="org7123c8a"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images</a><br /></li>
+<li><a id="org759d951"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org26f6ab8" class="outline-3">
-<h3 id="org26f6ab8"><span class="section-number-3">1.11</span> Have you used different HTML templating languages before?</h3>
+<div id="outline-container-orgd0e7814" class="outline-3">
+<h3 id="orgd0e7814"><span class="section-number-3">1.11</span> Have you used different HTML templating languages before?</h3>
 <div class="outline-text-3" id="text-1-11">
 </div>
-<div id="outline-container-orga054098" class="outline-4">
-<h4 id="orga054098">( way of introducing programming concepts to html, supporting dynamic content ) rails views?</h4>
+<div id="outline-container-org84b45c1" class="outline-4">
+<h4 id="org84b45c1">( way of introducing programming concepts to html, supporting dynamic content ) rails views?</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb540af" class="outline-2">
-<h2 id="orgcb540af"><span class="section-number-2">2</span> CSS</h2>
+<div id="outline-container-orga319ec8" class="outline-2">
+<h2 id="orga319ec8"><span class="section-number-2">2</span> CSS</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org92f857d" class="outline-3">
-<h3 id="org92f857d"><span class="section-number-3">2.1</span> What is CSS selector specificity and how does it work?</h3>
+<div id="outline-container-orgb6e6a14" class="outline-3">
+<h3 id="orgb6e6a14"><span class="section-number-3">2.1</span> What is CSS selector specificity and how does it work?</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgb3ba9de" class="outline-4">
-<h4 id="orgb3ba9de">assigns a value to selectors based on how general or specific. ( in order of specificity: type selectors, class selectors, id selectors )</h4>
-<div class="outline-text-4" id="text-orgb3ba9de">
+<div id="outline-container-orgc1ae504" class="outline-4">
+<h4 id="orgc1ae504">assigns a value to selectors based on how general or specific. ( in order of specificity: type selectors, class selectors, id selectors )</h4>
+<div class="outline-text-4" id="text-orgc1ae504">
 </div>
 <ul class="org-ul">
-<li><a id="org0d5e635"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</a><br /></li>
+<li><a id="orga9c7832"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org79a674a" class="outline-3">
-<h3 id="org79a674a"><span class="section-number-3">2.2</span> What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?</h3>
+<div id="outline-container-org2a1acc2" class="outline-3">
+<h3 id="org2a1acc2"><span class="section-number-3">2.2</span> What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-orgc4e3d7c" class="outline-4">
-<h4 id="orgc4e3d7c">Css reset removes all built in browser styling. Normalize tries to standardize across browsers. The latter, because a lot of built in styles are pretty useful.</h4>
-<div class="outline-text-4" id="text-orgc4e3d7c">
+<div id="outline-container-orgac3c607" class="outline-4">
+<h4 id="orgac3c607">Css reset removes all built in browser styling. Normalize tries to standardize across browsers. The latter, because a lot of built in styles are pretty useful.</h4>
+<div class="outline-text-4" id="text-orgac3c607">
 </div>
 <ul class="org-ul">
-<li><a id="org520d670"></a>source: <a href="https://pineco.de/a-brief-about-css-reset-and-normalize/">https://pineco.de/a-brief-about-css-reset-and-normalize/</a><br /></li>
+<li><a id="orgaede7ad"></a>source: <a href="https://pineco.de/a-brief-about-css-reset-and-normalize/">https://pineco.de/a-brief-about-css-reset-and-normalize/</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd516840" class="outline-3">
-<h3 id="orgd516840"><span class="section-number-3">2.3</span> Describe Floats and how they work.</h3>
+<div id="outline-container-org96aaed3" class="outline-3">
+<h3 id="org96aaed3"><span class="section-number-3">2.3</span> Describe Floats and how they work.</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org294f8ac" class="outline-4">
-<h4 id="org294f8ac">Allows an element to float in its container. An image with a float right will appear to the right of text in its container.</h4>
-<div class="outline-text-4" id="text-org294f8ac">
+<div id="outline-container-orgb317292" class="outline-4">
+<h4 id="orgb317292">Allows an element to float in its container. An image with a float right will appear to the right of text in its container.</h4>
+<div class="outline-text-4" id="text-orgb317292">
 </div>
 <ul class="org-ul">
-<li><a id="org315b723"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a><br /></li>
+<li><a id="orge32b605"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgebaf688" class="outline-3">
-<h3 id="orgebaf688"><span class="section-number-3">2.4</span> Describe z-index and how stacking context is formed.</h3>
+<div id="outline-container-org4dd0f8e" class="outline-3">
+<h3 id="org4dd0f8e"><span class="section-number-3">2.4</span> Describe z-index and how stacking context is formed.</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
-<div id="outline-container-org5318c1b" class="outline-4">
-<h4 id="org5318c1b">They determine the order in which stacking elements are rendered. Larger z values are rendered before smaller ones</h4>
-<div class="outline-text-4" id="text-org5318c1b">
+<div id="outline-container-orgec05e49" class="outline-4">
+<h4 id="orgec05e49">They determine the order in which stacking elements are rendered. Larger z values are rendered before smaller ones</h4>
+<div class="outline-text-4" id="text-orgec05e49">
 </div>
 <ul class="org-ul">
-<li><a id="org36268cb"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">https://developer.mozilla.org/en-US/docs/Web/CSS/z-index</a><br /></li>
+<li><a id="orgfb23861"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">https://developer.mozilla.org/en-US/docs/Web/CSS/z-index</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org31b6f72" class="outline-3">
-<h3 id="org31b6f72"><span class="section-number-3">2.5</span> Describe BFC (Block Formatting Context) and how it works.</h3>
+<div id="outline-container-orgb32491f" class="outline-3">
+<h3 id="orgb32491f"><span class="section-number-3">2.5</span> Describe BFC (Block Formatting Context) and how it works.</h3>
 <div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-org92e1cb4" class="outline-4">
-<h4 id="org92e1cb4">a bfc is created by a container thats contents will conform to the box model. Use cases: containing the overflow when a floated element is taller than its containing div. dealing with margin collapsing</h4>
-<div class="outline-text-4" id="text-org92e1cb4">
+<div id="outline-container-org8364266" class="outline-4">
+<h4 id="org8364266">a bfc is created by a container thats contents will conform to the box model. Use cases: containing the overflow when a floated element is taller than its containing div. dealing with margin collapsing</h4>
+<div class="outline-text-4" id="text-org8364266">
 </div>
 <ul class="org-ul">
-<li><a id="org6d64a0a"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context</a><br /></li>
+<li><a id="org471b188"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org115a6a9" class="outline-3">
-<h3 id="org115a6a9"><span class="section-number-3">2.6</span> What are the various clearing techniques and which is appropriate for what context?</h3>
+<div id="outline-container-orgcf49011" class="outline-3">
+<h3 id="orgcf49011"><span class="section-number-3">2.6</span> What are the various clearing techniques and which is appropriate for what context?</h3>
 <div class="outline-text-3" id="text-2-6">
 </div>
-<div id="outline-container-org4d5c4fd" class="outline-4">
-<h4 id="org4d5c4fd">Clearing: if two preceding elements are floated left and right, clearing the preceding element makes sure it takes up the space below the two  elements</h4>
-<div class="outline-text-4" id="text-org4d5c4fd">
+<div id="outline-container-org1dc3223" class="outline-4">
+<h4 id="org1dc3223">Clearing: if two preceding elements are floated left and right, clearing the preceding element makes sure it takes up the space below the two  elements</h4>
+<div class="outline-text-4" id="text-org1dc3223">
 </div>
 <ul class="org-ul">
-<li><a id="org83ce294"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">https://developer.mozilla.org/en-US/docs/Web/CSS/clear</a><br /></li>
+<li><a id="org8d1f5a5"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">https://developer.mozilla.org/en-US/docs/Web/CSS/clear</a><br /></li>
 </ul>
 </div>
-<div id="outline-container-org438c74e" class="outline-4">
-<h4 id="org438c74e">techniques: empty div to clear left and right floated elements. overflow on parent element. using a psuedo element :after the elements that need to be cleared</h4>
-<div class="outline-text-4" id="text-org438c74e">
+<div id="outline-container-org52eed7d" class="outline-4">
+<h4 id="org52eed7d">techniques: empty div to clear left and right floated elements. overflow on parent element. using a psuedo element :after the elements that need to be cleared</h4>
+<div class="outline-text-4" id="text-org52eed7d">
 </div>
 <ul class="org-ul">
-<li><a id="org650c922"></a>source: <a href="https://css-tricks.com/all-about-floats/">https://css-tricks.com/all-about-floats/</a><br /></li>
+<li><a id="org01b5655"></a>source: <a href="https://css-tricks.com/all-about-floats/">https://css-tricks.com/all-about-floats/</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2928049" class="outline-3">
-<h3 id="org2928049"><span class="section-number-3">2.7</span> How would you approach fixing browser-specific styling issues?</h3>
+<div id="outline-container-orgce49f68" class="outline-3">
+<h3 id="orgce49f68"><span class="section-number-3">2.7</span> How would you approach fixing browser-specific styling issues?</h3>
 <div class="outline-text-3" id="text-2-7">
 </div>
-<div id="outline-container-org7fd55a9" class="outline-4">
-<h4 id="org7fd55a9">Not use unsupported features in a way that adds too much to the presentation, feature queries, writing older css first, then having a feature test, and overrideing the css it the browser passes the feature test. Fallback for css rules: write most supported rule first, then newer css feature. older browsers will just skip a rule that can't be rendered</h4>
-<div class="outline-text-4" id="text-org7fd55a9">
+<div id="outline-container-org3613b4f" class="outline-4">
+<h4 id="org3613b4f">Not use unsupported features in a way that adds too much to the presentation, feature queries, writing older css first, then having a feature test, and overrideing the css it the browser passes the feature test. Fallback for css rules: write most supported rule first, then newer css feature. older browsers will just skip a rule that can't be rendered</h4>
+<div class="outline-text-4" id="text-org3613b4f">
 </div>
 <ul class="org-ul">
-<li><a id="org19e7c25"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS</a><br /></li>
+<li><a id="orgf26f3d3"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org657550e" class="outline-3">
-<h3 id="org657550e"><span class="section-number-3">2.8</span> How do you serve your pages for feature-constrained browsers?</h3>
+<div id="outline-container-org6f85e05" class="outline-3">
+<h3 id="org6f85e05"><span class="section-number-3">2.8</span> How do you serve your pages for feature-constrained browsers?</h3>
 <div class="outline-text-3" id="text-2-8">
 </div>
-<div id="outline-container-orgac882f9" class="outline-4">
-<h4 id="orgac882f9">making sure the base of it works for any browser / does not contain features that, if broken, compromise useability, rather when working enhance the UX.</h4>
+<div id="outline-container-orgd97960d" class="outline-4">
+<h4 id="orgd97960d">making sure the base of it works for any browser / does not contain features that, if broken, compromise useability, rather when working enhance the UX.</h4>
 </div>
-<div id="outline-container-org523e341" class="outline-4">
-<h4 id="org523e341">What techniques/processes do you use?</h4>
-<div class="outline-text-4" id="text-org523e341">
+<div id="outline-container-org8891f47" class="outline-4">
+<h4 id="org8891f47">What techniques/processes do you use?</h4>
+<div class="outline-text-4" id="text-org8891f47">
 </div>
 <ul class="org-ul">
-<li><a id="orgd2ea844"></a>@supports ?<br /></li>
+<li><a id="orgc80d8f9"></a>@supports ?<br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf8255da" class="outline-3">
-<h3 id="orgf8255da"><span class="section-number-3">2.9</span> What are the different ways to visually hide content (and make it available only for screen readers)?</h3>
+<div id="outline-container-org7733d1f" class="outline-3">
+<h3 id="org7733d1f"><span class="section-number-3">2.9</span> What are the different ways to visually hide content (and make it available only for screen readers)?</h3>
 <div class="outline-text-3" id="text-2-9">
 </div>
-<div id="outline-container-org997493a" class="outline-4">
-<h4 id="org997493a">Using absolute positioning to hide it off screen</h4>
-<div class="outline-text-4" id="text-org997493a">
+<div id="outline-container-org838f7ad" class="outline-4">
+<h4 id="org838f7ad">Using absolute positioning to hide it off screen</h4>
+<div class="outline-text-4" id="text-org838f7ad">
 </div>
 <ul class="org-ul">
-<li><a id="orgbe85c71"></a>source: <a href="https://zellwk.com/blog/hide-content-accessibly/">https://zellwk.com/blog/hide-content-accessibly/</a><br /></li>
+<li><a id="org37798f8"></a>source: <a href="https://zellwk.com/blog/hide-content-accessibly/">https://zellwk.com/blog/hide-content-accessibly/</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org472a3c3" class="outline-3">
-<h3 id="org472a3c3"><span class="section-number-3">2.10</span> Have you ever used a grid system, and if so, what do you prefer?</h3>
+<div id="outline-container-org0171e13" class="outline-3">
+<h3 id="org0171e13"><span class="section-number-3">2.10</span> Have you ever used a grid system, and if so, what do you prefer?</h3>
 </div>
-<div id="outline-container-org703a415" class="outline-3">
-<h3 id="org703a415"><span class="section-number-3">2.11</span> Have you used or implemented media queries or mobile specific layouts/CSS?</h3>
+<div id="outline-container-org0c08cbb" class="outline-3">
+<h3 id="org0c08cbb"><span class="section-number-3">2.11</span> Have you used or implemented media queries or mobile specific layouts/CSS?</h3>
 </div>
-<div id="outline-container-org9b2249a" class="outline-3">
-<h3 id="org9b2249a"><span class="section-number-3">2.12</span> Are you familiar with styling SVG?</h3>
+<div id="outline-container-org1e335c4" class="outline-3">
+<h3 id="org1e335c4"><span class="section-number-3">2.12</span> Are you familiar with styling SVG?</h3>
 </div>
-<div id="outline-container-orgcc1f5c9" class="outline-3">
-<h3 id="orgcc1f5c9"><span class="section-number-3">2.13</span> Can you give an example of an `@media` property other than `screen`?</h3>
+<div id="outline-container-org36984e8" class="outline-3">
+<h3 id="org36984e8"><span class="section-number-3">2.13</span> Can you give an example of an `@media` property other than `screen`?</h3>
 <div class="outline-text-3" id="text-2-13">
 </div>
-<div id="outline-container-org58568b9" class="outline-4">
-<h4 id="org58568b9">all, print, speech</h4>
-<div class="outline-text-4" id="text-org58568b9">
+<div id="outline-container-orgeeb3441" class="outline-4">
+<h4 id="orgeeb3441">all, print, speech</h4>
+<div class="outline-text-4" id="text-orgeeb3441">
 </div>
 <ul class="org-ul">
-<li><a id="org75e633d"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries</a><br /></li>
+<li><a id="org850ac41"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org04fb35e" class="outline-3">
-<h3 id="org04fb35e"><span class="section-number-3">2.14</span> What are some of the "gotchas" for writing efficient CSS?</h3>
+<div id="outline-container-org5dc8391" class="outline-3">
+<h3 id="org5dc8391"><span class="section-number-3">2.14</span> What are some of the "gotchas" for writing efficient CSS?</h3>
 <div class="outline-text-3" id="text-2-14">
 </div>
-<div id="outline-container-org69bb380" class="outline-4">
-<h4 id="org69bb380">avoid key selectors( the rightmost selector in a compound selector statement) that match a large number of elements ( because the browser will first match the key selector. the key selector should be a class or an id not a type ). use class and id selectors instead of type selectors. avoid redundancy. no universal selector</h4>
-<div class="outline-text-4" id="text-org69bb380">
+<div id="outline-container-orgfd6fbe3" class="outline-4">
+<h4 id="orgfd6fbe3">avoid key selectors( the rightmost selector in a compound selector statement) that match a large number of elements ( because the browser will first match the key selector. the key selector should be a class or an id not a type ). use class and id selectors instead of type selectors. avoid redundancy. no universal selector</h4>
+<div class="outline-text-4" id="text-orgfd6fbe3">
 </div>
 <ul class="org-ul">
-<li><a id="orgb974950"></a>source: <a href="https://css-tricks.com/efficiently-rendering-css/">https://css-tricks.com/efficiently-rendering-css/</a><br /></li>
+<li><a id="org6eee060"></a>source: <a href="https://css-tricks.com/efficiently-rendering-css/">https://css-tricks.com/efficiently-rendering-css/</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org879c265" class="outline-3">
-<h3 id="org879c265"><span class="section-number-3">2.15</span> What are the advantages/disadvantages of using CSS preprocessors?</h3>
+<div id="outline-container-orgd1bb26c" class="outline-3">
+<h3 id="orgd1bb26c"><span class="section-number-3">2.15</span> What are the advantages/disadvantages of using CSS preprocessors?</h3>
 <div class="outline-text-3" id="text-2-15">
 </div>
-<div id="outline-container-orgca2b2a3" class="outline-4">
-<h4 id="orgca2b2a3">Advantages: more DRY. nesting. mixins</h4>
+<div id="outline-container-org2a98eef" class="outline-4">
+<h4 id="org2a98eef">Advantages: more DRY. nesting. mixins</h4>
 </div>
-<div id="outline-container-org30f5472" class="outline-4">
-<h4 id="org30f5472">disadvantages: too much nesting. larger css file. performance.</h4>
+<div id="outline-container-org3b96e0e" class="outline-4">
+<h4 id="org3b96e0e">disadvantages: too much nesting. larger css file. performance.</h4>
 </div>
-<div id="outline-container-orga607bc7" class="outline-4">
-<h4 id="orga607bc7">source: <a href="https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e">https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e</a></h4>
+<div id="outline-container-org18743fb" class="outline-4">
+<h4 id="org18743fb">source: <a href="https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e">https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e</a></h4>
 </div>
 </div>
-<div id="outline-container-org725344c" class="outline-3">
-<h3 id="org725344c"><span class="section-number-3">2.16</span> How would you implement a web design comp that uses non-standard fonts?</h3>
+<div id="outline-container-orga5b65a8" class="outline-3">
+<h3 id="orga5b65a8"><span class="section-number-3">2.16</span> How would you implement a web design comp that uses non-standard fonts?</h3>
 </div>
-<div id="outline-container-org073fdd7" class="outline-3">
-<h3 id="org073fdd7"><span class="section-number-3">2.17</span> Explain how a browser determines what elements match a CSS selector.</h3>
+<div id="outline-container-org9dcc006" class="outline-3">
+<h3 id="org9dcc006"><span class="section-number-3">2.17</span> Explain how a browser determines what elements match a CSS selector.</h3>
 <div class="outline-text-3" id="text-2-17">
 </div>
-<div id="outline-container-org467da01" class="outline-4">
-<h4 id="org467da01">Before rendering any content it makes the CSS object model ( CSSOM ) this is a tree structure much like the dom, that the browser combines with the dom to make a render tree. This is basically the element, plus the styles. Layout is next, then paint, where actual pixels show up on the page</h4>
-<div class="outline-text-4" id="text-org467da01">
+<div id="outline-container-org68c1a6f" class="outline-4">
+<h4 id="org68c1a6f">Before rendering any content it makes the CSS object model ( CSSOM ) this is a tree structure much like the dom, that the browser combines with the dom to make a render tree. This is basically the element, plus the styles. Layout is next, then paint, where actual pixels show up on the page</h4>
+<div class="outline-text-4" id="text-org68c1a6f">
 </div>
 <ul class="org-ul">
-<li><a id="orgc521e73"></a>source: <a href="https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/">https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/</a><br /></li>
+<li><a id="org30214a1"></a>source: <a href="https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/">https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd50513e" class="outline-3">
-<h3 id="orgd50513e"><span class="section-number-3">2.18</span> Describe pseudo-elements and discuss what they are used for.</h3>
+<div id="outline-container-orge993953" class="outline-3">
+<h3 id="orge993953"><span class="section-number-3">2.18</span> Describe pseudo-elements and discuss what they are used for.</h3>
 <div class="outline-text-3" id="text-2-18">
 </div>
-<div id="outline-container-org0679ec2" class="outline-4">
-<h4 id="org0679ec2">used after a selector to style only 1 part of the selected element. ex p::first-line will apply to the first line of a p tag.</h4>
+<div id="outline-container-orge3c61a0" class="outline-4">
+<h4 id="orge3c61a0">used after a selector to style only 1 part of the selected element. ex p::first-line will apply to the first line of a p tag.</h4>
 </div>
-<div id="outline-container-org33e32f2" class="outline-4">
-<h4 id="org33e32f2">use cases: drop caps. inserting content without adding elements to html</h4>
-<div class="outline-text-4" id="text-org33e32f2">
+<div id="outline-container-orgc884159" class="outline-4">
+<h4 id="orgc884159">use cases: drop caps. inserting content without adding elements to html</h4>
+<div class="outline-text-4" id="text-orgc884159">
 </div>
 <ul class="org-ul">
-<li><a id="org029ff5b"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements</a><br /></li>
+<li><a id="org21c551d"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbf8520c" class="outline-3">
-<h3 id="orgbf8520c"><span class="section-number-3">2.19</span> Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.</h3>
+<div id="outline-container-orgaa10434" class="outline-3">
+<h3 id="orgaa10434"><span class="section-number-3">2.19</span> Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.</h3>
+<div class="outline-text-3" id="text-2-19">
 </div>
-<div id="outline-container-orgdb756a6" class="outline-3">
-<h3 id="orgdb756a6"><span class="section-number-3">2.20</span> What does ```* { box-sizing: border-box; }``` do? What are its advantages?</h3>
+<div id="outline-container-org6214528" class="outline-4">
+<h4 id="org6214528">the box is the aggregate of margin, border, padding, and the content itself surrounding every html element. changing the value of box-sizing.</h4>
+<div class="outline-text-4" id="text-org6214528">
 </div>
-<div id="outline-container-org9c94f14" class="outline-3">
-<h3 id="org9c94f14"><span class="section-number-3">2.21</span> What is the CSS `display` property and can you give a few examples of its use?</h3>
+<ul class="org-ul">
+<li><a id="orgb8f3559"></a>content-box: model where width of an element is only the content itself<br /></li>
+<li><a id="org5f64fdc"></a>border-box: model where width of element is content plus padding and border<br /></li>
+</ul>
 </div>
-<div id="outline-container-org1e657c1" class="outline-3">
-<h3 id="org1e657c1"><span class="section-number-3">2.22</span> What's the difference between inline and inline-block?</h3>
+<div id="outline-container-org9953091" class="outline-4">
+<h4 id="org9953091">source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model</a></h4>
 </div>
-<div id="outline-container-org0242d06" class="outline-3">
-<h3 id="org0242d06"><span class="section-number-3">2.23</span> What's the difference between the "nth-of-type()" and "nth-child()" selectors?</h3>
 </div>
-<div id="outline-container-orgc5b05b5" class="outline-3">
-<h3 id="orgc5b05b5"><span class="section-number-3">2.24</span> What's the difference between a relative, fixed, absolute and statically positioned element?</h3>
+<div id="outline-container-org4070946" class="outline-3">
+<h3 id="org4070946"><span class="section-number-3">2.20</span> What does ```* { box-sizing: border-box; }``` do? What are its advantages?</h3>
+<div class="outline-text-3" id="text-2-20">
 </div>
-<div id="outline-container-orgb2d00be" class="outline-3">
-<h3 id="orgb2d00be"><span class="section-number-3">2.25</span> What existing CSS frameworks have you used locally, or in production? How would you change/improve them?</h3>
+<div id="outline-container-org7ef5ca2" class="outline-4">
+<h4 id="org7ef5ca2">width values will include border and padding in their calculation. ex a div width a width of 350 px and border of 10px will produce a div whos content border and padding adds up to 350px</h4>
 </div>
-<div id="outline-container-org44c74a5" class="outline-3">
-<h3 id="org44c74a5"><span class="section-number-3">2.26</span> Have you used CSS Grid?</h3>
+<div id="outline-container-orgaf9069b" class="outline-4">
+<h4 id="orgaf9069b">advantages: easier calculations</h4>
 </div>
-<div id="outline-container-orgf55d0b9" class="outline-3">
-<h3 id="orgf55d0b9"><span class="section-number-3">2.27</span> Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?</h3>
 </div>
-<div id="outline-container-org5396a35" class="outline-3">
-<h3 id="org5396a35"><span class="section-number-3">2.28</span> Have you ever worked with retina graphics? If so, when and what techniques did you use?</h3>
+<div id="outline-container-orga78fe16" class="outline-3">
+<h3 id="orga78fe16"><span class="section-number-3">2.21</span> What is the CSS `display` property and can you give a few examples of its use?</h3>
+<div class="outline-text-3" id="text-2-21">
 </div>
-<div id="outline-container-org9ce0581" class="outline-3">
-<h3 id="org9ce0581"><span class="section-number-3">2.29</span> Is there any reason you'd want to use `translate()` instead of <b>absolute positioning</b>, or vice-versa? And why?</h3>
+<div id="outline-container-orgbba91c1" class="outline-4">
+<h4 id="orgbba91c1">one: whether it is block or inline, two: whether its children are grid or flex etc.</h4>
+<div class="outline-text-4" id="text-orgbba91c1">
+</div>
+<ul class="org-ul">
+<li><a id="org985d68c"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">https://developer.mozilla.org/en-US/docs/Web/CSS/display</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6038592" class="outline-3">
+<h3 id="org6038592"><span class="section-number-3">2.22</span> What's the difference between inline and inline-block?</h3>
+<div class="outline-text-3" id="text-2-22">
+</div>
+<div id="outline-container-org912e281" class="outline-4">
+<h4 id="org912e281">inline elements do nto respect css rules for width and height.</h4>
+<div class="outline-text-4" id="text-org912e281">
+</div>
+<ul class="org-ul">
+<li><a id="org23d73c7"></a>source: <a href="https://alligator.io/css/display-inline-vs-inline-block/">https://alligator.io/css/display-inline-vs-inline-block/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd04b295" class="outline-3">
+<h3 id="orgd04b295"><span class="section-number-3">2.23</span> What's the difference between the "nth-of-type()" and "nth-child()" selectors?</h3>
+<div class="outline-text-3" id="text-2-23">
+</div>
+<div id="outline-container-org78deaa9" class="outline-4">
+<h4 id="org78deaa9">nth-of-type will only select the nth element of the same type. nth-child will select the nth among sibling elements</h4>
+<div class="outline-text-4" id="text-org78deaa9">
+</div>
+<ul class="org-ul">
+<li><a id="org8ed9411"></a>source: <a href="https://bitsofco.de/nth-child-vs-nth-of-type/">https://bitsofco.de/nth-child-vs-nth-of-type/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb5497b" class="outline-3">
+<h3 id="orgfb5497b"><span class="section-number-3">2.24</span> What's the difference between a relative, fixed, absolute and statically positioned element?</h3>
+<div class="outline-text-3" id="text-2-24">
+</div>
+<div id="outline-container-org996f027" class="outline-4">
+<h4 id="org996f027">static is the default, meaning the element is positioned in the normal flow of the document.</h4>
+</div>
+<div id="outline-container-org07d20d2" class="outline-4">
+<h4 id="org07d20d2">relative: means the element is positioned relative to its static position, so offset by the top right bottom left values.</h4>
+</div>
+<div id="outline-container-orgb37d2a2" class="outline-4">
+<h4 id="orgb37d2a2">absolute: the element is not placed in the normal document flow. it is placed relative to the closest positioned ancestor, or the containing block.</h4>
+</div>
+<div id="outline-container-org92df5f7" class="outline-4">
+<h4 id="org92df5f7">fixed: the element is not in the flow of the document. it is relative to either the viewport, or an ancestor with a value of transform, perspective, or filter of something other than none.</h4>
+</div>
+<div id="outline-container-org2b8adb7" class="outline-4">
+<h4 id="org2b8adb7">source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://developer.mozilla.org/en-US/docs/Web/CSS/position</a></h4>
+</div>
+</div>
+<div id="outline-container-orge126d9c" class="outline-3">
+<h3 id="orge126d9c"><span class="section-number-3">2.25</span> What existing CSS frameworks have you used locally, or in production? How would you change/improve them?</h3>
+</div>
+<div id="outline-container-org6e483a8" class="outline-3">
+<h3 id="org6e483a8"><span class="section-number-3">2.26</span> Have you used CSS Grid?</h3>
+</div>
+<div id="outline-container-orgc0078c3" class="outline-3">
+<h3 id="orgc0078c3"><span class="section-number-3">2.27</span> Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?</h3>
+</div>
+<div id="outline-container-org0d4820e" class="outline-3">
+<h3 id="org0d4820e"><span class="section-number-3">2.28</span> Have you ever worked with retina graphics? If so, when and what techniques did you use?</h3>
+</div>
+<div id="outline-container-orgefbf0d1" class="outline-3">
+<h3 id="orgefbf0d1"><span class="section-number-3">2.29</span> Is there any reason you'd want to use `translate()` instead of <b>absolute positioning</b>, or vice-versa? And why?</h3>
+<div class="outline-text-3" id="text-2-29">
+</div>
+<div id="outline-container-org9b74e24" class="outline-4">
+<h4 id="org9b74e24">translate can have performance benefits, since it triggers a render in a different layer than positioning. animations.</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org6d3e46e" class="outline-2">
+<h2 id="org6d3e46e"><span class="section-number-2">3</span> Javascript</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgdf0b3b6" class="outline-3">
+<h3 id="orgdf0b3b6"><span class="section-number-3">3.1</span> Explain event delegation.</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4ac8c4c" class="outline-4">
+<h4 id="org4ac8c4c">Having a parent element listen for all events occurring within it. ex, putting an event listener on a form, and making decisions based on the value of event.target, when the listener fires.</h4>
+<div class="outline-text-4" id="text-org4ac8c4c">
+</div>
+<ul class="org-ul">
+<li><a id="orge3ac0b1"></a>source: <a href="https://javascript.info/event-delegation">https://javascript.info/event-delegation</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a3c43c" class="outline-3">
+<h3 id="org3a3c43c"><span class="section-number-3">3.2</span> Explain how `this` works in JavaScript.</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org21363a6" class="outline-4">
+<h4 id="org21363a6">source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this</a></h4>
+</div>
+<div id="outline-container-orgb162438" class="outline-4">
+<h4 id="orgb162438">References the containing object</h4>
+</div>
+<div id="outline-container-orgc93090c" class="outline-4">
+<h4 id="orgc93090c">Can you give an example of one of the ways that working with `this` has changed in ES6?</h4>
+<div class="outline-text-4" id="text-orgc93090c">
+</div>
+<ul class="org-ul">
+<li><a id="org2695253"></a>When used in arrow function, this retains the lexical context where the function was called from<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdadf46d" class="outline-3">
+<h3 id="orgdadf46d"><span class="section-number-3">3.3</span> Explain how prototypal inheritance works.</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orga547b3c" class="outline-4">
+<h4 id="orga547b3c">every object in javascript inherits properties from its prototype. for instance all arrays have the properties of Array.prototype, which inherits from its own prototype.</h4>
+<div class="outline-text-4" id="text-orga547b3c">
+</div>
+<ul class="org-ul">
+<li><a id="orgde7a6ed"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ad77b1" class="outline-3">
+<h3 id="org2ad77b1"><span class="section-number-3">3.4</span> What's the difference between a variable that is: `null`, `undefined` or undeclared?</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org0b99562" class="outline-4">
+<h4 id="org0b99562">variables not yet assigned a value have the value undefined. null values must be deliberately assigned to a variable. accessing undeclared ( name doesn't exist in current scope ) variables will result in an error but using type of will return undefined.</h4>
+<div class="outline-text-4" id="text-org0b99562">
+</div>
+<ul class="org-ul">
+<li><a id="org04a5f38"></a>undefined is an object, null is a primitive<br /></li>
+</ul>
+</div>
+<div id="outline-container-org5a93de1" class="outline-4">
+<h4 id="org5a93de1">How would you go about checking for any of these states?</h4>
+<div class="outline-text-4" id="text-org5a93de1">
+</div>
+<ul class="org-ul">
+<li><a id="orge43df68"></a>typeof checkes for undefined or undeclared. use strict equals to check for null ( null == undefined is true )<br /></li>
+</ul>
+</div>
+<div id="outline-container-org5ab1bd1" class="outline-4">
+<h4 id="org5ab1bd1">source: <a href="https://stackoverflow.com/questions/5101948/javascript-checking-for-null-vs-undefined-and-difference-between-and">https://stackoverflow.com/questions/5101948/javascript-checking-for-null-vs-undefined-and-difference-between-and</a></h4>
+</div>
+</div>
+<div id="outline-container-org94f0b31" class="outline-3">
+<h3 id="org94f0b31"><span class="section-number-3">3.5</span> What is a closure, and how/why would you use one?</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgec075d6" class="outline-4">
+<h4 id="orgec075d6">a combination of a function and the lexical context where that function was declared.</h4>
+</div>
+<div id="outline-container-orgc721011" class="outline-4">
+<h4 id="orgc721011">having a function that returns a function with some local state saved</h4>
+</div>
+<div id="outline-container-orgbe9ef72" class="outline-4">
+<h4 id="orgbe9ef72">use case: use like an object with only one method or to emulate a private method.</h4>
+</div>
+<div id="outline-container-org43f4511" class="outline-4">
+<h4 id="org43f4511">source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures</a></h4>
+</div>
+</div>
+<div id="outline-container-org643ffc3" class="outline-3">
+<h3 id="org643ffc3"><span class="section-number-3">3.6</span> What language constructions do you use for iterating over object properties and array items?</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org87ff29d" class="outline-4">
+<h4 id="org87ff29d">Map, filter, select, forEach</h4>
+</div>
+</div>
+<div id="outline-container-orge3a494c" class="outline-3">
+<h3 id="orge3a494c"><span class="section-number-3">3.7</span> Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org5ab3b59" class="outline-4">
+<h4 id="org5ab3b59">forEach mutates the array it is called on, and returns undefined. Map returns a new array, leaving the array it was called on unchanged. To maintain function purity</h4>
+<div class="outline-text-4" id="text-org5ab3b59">
+</div>
+<ul class="org-ul">
+<li><a id="org7b398ae"></a>source: <a href="https://codeburst.io/javascript-map-vs-foreach-f38111822c0f">https://codeburst.io/javascript-map-vs-foreach-f38111822c0f</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org530504a" class="outline-3">
+<h3 id="org530504a"><span class="section-number-3">3.8</span> What's a typical use case for anonymous functions?</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org67a6ef2" class="outline-4">
+<h4 id="org67a6ef2">passing as arguments to other functions</h4>
+<div class="outline-text-4" id="text-org67a6ef2">
+</div>
+<ul class="org-ul">
+<li><a id="org93fc77a"></a>source: <a href="https://www.quora.com/Whats-a-typical-use-case-for-anonymous-functions-in-JavaScript">https://www.quora.com/Whats-a-typical-use-case-for-anonymous-functions-in-JavaScript</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdbefee9" class="outline-3">
+<h3 id="orgdbefee9"><span class="section-number-3">3.9</span> What's the difference between host objects and native objects</h3>
+<div class="outline-text-3" id="text-3-9">
+</div>
+<div id="outline-container-org2d135fd" class="outline-4">
+<h4 id="org2d135fd">native objects are those built in to the ecmascript specification. host objects are those defined by the host environment, ex a browser has window, document, etc.</h4>
+<div class="outline-text-4" id="text-org2d135fd">
+</div>
+<ul class="org-ul">
+<li><a id="orgdac4a46"></a>source: <a href="https://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects">https://stackoverflow.com/questions/7614317/what-is-the-difference-between-native-objects-and-host-objects</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3c1d1f5" class="outline-3">
+<h3 id="org3c1d1f5"><span class="section-number-3">3.10</span> Explain the difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?</h3>
+<div class="outline-text-3" id="text-3-10">
+</div>
+<div id="outline-container-org503e1c6" class="outline-4">
+<h4 id="org503e1c6">1st is function declaration, 2nd is saving result of called function. 3rd, is declaring an instance of a class called Person</h4>
+</div>
+</div>
+<div id="outline-container-orge1fc278" class="outline-3">
+<h3 id="orge1fc278"><span class="section-number-3">3.11</span> Explain the differences on the usage of `foo` between `function foo() {}` and `var foo = function() {}`</h3>
+<div class="outline-text-3" id="text-3-11">
+</div>
+<div id="outline-container-org0b944e6" class="outline-4">
+<h4 id="org0b944e6">in the first case is a function declaration. the 2nd is a function expression. they enter the scope at different times in the parsing cycle.</h4>
+<div class="outline-text-4" id="text-org0b944e6">
+</div>
+<ul class="org-ul">
+<li><a id="org3bcf991"></a>source: <a href="https://stackoverflow.com/questions/5142286/two-functions-with-the-same-name-in-javascript-how-can-this-work/5142335#5142335">https://stackoverflow.com/questions/5142286/two-functions-with-the-same-name-in-javascript-how-can-this-work/5142335#5142335</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdeb4fae" class="outline-3">
+<h3 id="orgdeb4fae"><span class="section-number-3">3.12</span> Can you explain what `Function.call` and `Function.apply` do? What's the notable difference between the two?</h3>
+<div class="outline-text-3" id="text-3-12">
+</div>
+<div id="outline-container-orgc1cf9de" class="outline-4">
+<h4 id="orgc1cf9de">Call is property of methods of objects, and takes an instance as an argumnet. it runs the method of the object, in the scope of the instance. Additional arguments can be added, but number of arguments does have to bo known. Apply does the same thing, but the second argument is an array of arguments to pass to the function</h4>
+<div class="outline-text-4" id="text-orgc1cf9de">
+</div>
+<ul class="org-ul">
+<li><a id="org2d287f8"></a>source: <a href="http://hangar.runway7.net/javascript/difference-call-apply">http://hangar.runway7.net/javascript/difference-call-apply</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d35868" class="outline-3">
+<h3 id="org1d35868"><span class="section-number-3">3.13</span> Explain `Function.prototype.bind`.</h3>
+<div class="outline-text-3" id="text-3-13">
+</div>
+<div id="outline-container-orgebd9f40" class="outline-4">
+<h4 id="orgebd9f40">returns a function with the given value for this.  Does not call it.</h4>
+<div class="outline-text-4" id="text-orgebd9f40">
+</div>
+<ul class="org-ul">
+<li><a id="orgc4d42c3"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3bb78f" class="outline-3">
+<h3 id="orgb3bb78f"><span class="section-number-3">3.14</span> What's the difference between feature detection, feature inference, and using the UA string?</h3>
+<div class="outline-text-3" id="text-3-14">
+</div>
+<div id="outline-container-org5e0648d" class="outline-4">
+<h4 id="org5e0648d">feature detection is testing for a user agent feature, and executing code based on that. feature interference is assuming that if one new browser feature exists, more must exist. this is not recommended. the ua string is a string that a browser sends listing information and available features. this is not a reliable way of testing for features</h4>
+<div class="outline-text-4" id="text-org5e0648d">
+</div>
+<ul class="org-ul">
+<li><a id="org43e8a5d"></a>source: <a href="https://stackoverflow.com/questions/20104930/whats-the-difference-between-feature-detection-feature-inference-and-using-th/20105074#20105074">https://stackoverflow.com/questions/20104930/whats-the-difference-between-feature-detection-feature-inference-and-using-th/20105074#20105074</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9c42441" class="outline-3">
+<h3 id="org9c42441"><span class="section-number-3">3.15</span> Explain "hoisting".</h3>
+<div class="outline-text-3" id="text-3-15">
+</div>
+<div id="outline-container-orgf819105" class="outline-4">
+<h4 id="orgf819105">Variable DECLARATIONS, NOT ASSIGNMENTS are moved to the top of the execution context</h4>
+<div class="outline-text-4" id="text-orgf819105">
+</div>
+<ul class="org-ul">
+<li><a id="org8d03f02"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">https://developer.mozilla.org/en-US/docs/Glossary/Hoisting</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc18da32" class="outline-3">
+<h3 id="orgc18da32"><span class="section-number-3">3.16</span> Event bubbling vs event capturing.</h3>
+<div class="outline-text-3" id="text-3-16">
+</div>
+<div id="outline-container-orgd377df3" class="outline-4">
+<h4 id="orgd377df3">Two ways of dealing with the situation where an event fires nested in the Dom tree where two event handlers could conceivably react to the event. Bubbling is where it travels up the tree, in that the inner most event handler fires. Capturing is where the outer most one fires, trigger the inner event listener.</h4>
+<div class="outline-text-4" id="text-orgd377df3">
+</div>
+<ul class="org-ul">
+<li><a id="org4edc2ca"></a>source: <a href="https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing">https://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0e4818" class="outline-3">
+<h3 id="orga0e4818"><span class="section-number-3">3.17</span> What's the difference between an "attribute" and a "property"?</h3>
+<div class="outline-text-3" id="text-3-17">
+</div>
+<div id="outline-container-org5b356c6" class="outline-4">
+<h4 id="org5b356c6">Attributes are what html has. When those attributes enter the html object created in the Dom tree, they become properties of that object. for instance, class is an html attribute and className is the DOM property</h4>
+<div class="outline-text-4" id="text-org5b356c6">
+</div>
+<ul class="org-ul">
+<li><a id="org4fb0d94"></a>source: <a href="https://frontarm.com/james-k-nelson/html-vs-dom-attributes/">https://frontarm.com/james-k-nelson/html-vs-dom-attributes/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8803a40" class="outline-3">
+<h3 id="org8803a40"><span class="section-number-3">3.18</span> What are the pros and cons of extending built-in JavaScript objects?</h3>
+<div class="outline-text-3" id="text-3-18">
+</div>
+<div id="outline-container-org427bd3b" class="outline-4">
+<h4 id="org427bd3b">Interfering with inherited properties or methods by having the same name. Adding functionality to objects.</h4>
+<div class="outline-text-4" id="text-org427bd3b">
+</div>
+<ul class="org-ul">
+<li><a id="org85a8577"></a>source: <a href="https://stackoverflow.com/questions/8859828/javascript-what-dangers-are-in-extending-array-prototype">https://stackoverflow.com/questions/8859828/javascript-what-dangers-are-in-extending-array-prototype</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org65b6ce6" class="outline-3">
+<h3 id="org65b6ce6"><span class="section-number-3">3.19</span> What is the difference between `==` and `===`?</h3>
+<div class="outline-text-3" id="text-3-19">
+</div>
+<div id="outline-container-orga341647" class="outline-4">
+<h4 id="orga341647">Triple equals does not change types, “1” <code>=</code> 1 is false but “1” == 1 is true</h4>
+<div class="outline-text-4" id="text-orga341647">
+</div>
+<ul class="org-ul">
+<li><a id="org91ab640"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ff96ab" class="outline-3">
+<h3 id="org4ff96ab"><span class="section-number-3">3.20</span> Explain the same-origin policy with regards to JavaScript.</h3>
+<div class="outline-text-3" id="text-3-20">
+</div>
+<div id="outline-container-orge912a1b" class="outline-4">
+<h4 id="orge912a1b">Determines whether two different web pages can interact with each other. They must have the same scheme, host, and port to do so. This stops js from running on one site and effecting the other, if they are not directly related.</h4>
+<div class="outline-text-4" id="text-orge912a1b">
+</div>
+<ul class="org-ul">
+<li><a id="org0ab8752"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org458c5d6" class="outline-3">
+<h3 id="org458c5d6"><span class="section-number-3">3.21</span> Why is it called a Ternary operator, what does the word "Ternary" indicate?</h3>
+<div class="outline-text-3" id="text-3-21">
+</div>
+<div id="outline-container-org1bb1804" class="outline-4">
+<h4 id="org1bb1804">Syntactic sugar for an if else. the word ternary refers to three parts. a ternary operator has a condition, and two branches for true and false.</h4>
+<div class="outline-text-4" id="text-org1bb1804">
+</div>
+<ul class="org-ul">
+<li><a id="orgc6c6ca2"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgadb7960" class="outline-3">
+<h3 id="orgadb7960"><span class="section-number-3">3.22</span> What is strict mode? What are some of the advantages/disadvantages of using it?</h3>
+<div class="outline-text-3" id="text-3-22">
+</div>
+<div id="outline-container-orgcdd1c8c" class="outline-4">
+<h4 id="orgcdd1c8c">strict mode is a flag to instruct the browser to be less lenient and throw errors in certain situations. it dissalows the use of implicit declaration of variables, which may affect an older codebase, but is good in that implicit variables are unclear.</h4>
+</div>
+</div>
+<div id="outline-container-orgd04173c" class="outline-3">
+<h3 id="orgd04173c"><span class="section-number-3">3.23</span> What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?</h3>
+<div class="outline-text-3" id="text-3-23">
+</div>
+<div id="outline-container-org96583d9" class="outline-4">
+<h4 id="org96583d9">advantages: classes, type checking, new features.</h4>
+</div>
+<div id="outline-container-orgd4b7ead" class="outline-4">
+<h4 id="orgd4b7ead">disadvantages: overhead of webpack or gulp. familiarity with devs.</h4>
+</div>
+<div id="outline-container-orgaaea6d1" class="outline-4">
+<h4 id="orgaaea6d1">source: <a href="https://www.quora.com/What-are-some-of-the-advantages-disadvantages-of-writing-JavaScript-code-in-a-language-that-compiles-to-JavaScript">https://www.quora.com/What-are-some-of-the-advantages-disadvantages-of-writing-JavaScript-code-in-a-language-that-compiles-to-JavaScript</a></h4>
+</div>
+</div>
+<div id="outline-container-orgfb7fb04" class="outline-3">
+<h3 id="orgfb7fb04"><span class="section-number-3">3.24</span> What tools and techniques do you use debugging JavaScript code?</h3>
+<div class="outline-text-3" id="text-3-24">
+</div>
+<div id="outline-container-orged75cb2" class="outline-4">
+<h4 id="orged75cb2">jest, console.log, debugger.</h4>
+</div>
+</div>
+<div id="outline-container-org3e7ece9" class="outline-3">
+<h3 id="org3e7ece9"><span class="section-number-3">3.25</span> Explain the difference between mutable and immutable objects.</h3>
+<div class="outline-text-3" id="text-3-25">
+</div>
+<div id="outline-container-org801c7be" class="outline-4">
+<h4 id="org801c7be">What is an example of an immutable object in JavaScript?</h4>
+<div class="outline-text-4" id="text-org801c7be">
+</div>
+<ul class="org-ul">
+<li><a id="orgfdb1c08"></a>React's state<br /></li>
+</ul>
+</div>
+<div id="outline-container-org0ffadb8" class="outline-4">
+<h4 id="org0ffadb8">What are the pros and cons of immutability?</h4>
+<div class="outline-text-4" id="text-org0ffadb8">
+</div>
+<ul class="org-ul">
+<li><a id="org94f1dd6"></a>makes equality more reliable. muteable data is more performative<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgdb82bb6" class="outline-4">
+<h4 id="orgdb82bb6">How can you achieve immutability in your own code?</h4>
+<div class="outline-text-4" id="text-orgdb82bb6">
+</div>
+<ul class="org-ul">
+<li><a id="orgba53a24"></a>use Object.assign to change properties of objects. use map and filter or similar constructs to change arrays.<br /></li>
+</ul>
+</div>
+<div id="outline-container-org50e1589" class="outline-4">
+<h4 id="org50e1589">source: <a href="https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310">https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310</a></h4>
+</div>
+</div>
+<div id="outline-container-orgfdece30" class="outline-3">
+<h3 id="orgfdece30"><span class="section-number-3">3.26</span> Explain the difference between synchronous and asynchronous functions.</h3>
+<div class="outline-text-3" id="text-3-26">
+</div>
+<div id="outline-container-org93dd4d6" class="outline-4">
+<h4 id="org93dd4d6">Synchronous code stops everything from happened until they return. Async do not</h4>
+<div class="outline-text-4" id="text-org93dd4d6">
+</div>
+<ul class="org-ul">
+<li><a id="org98091fc"></a>source: <a href="https://stackoverflow.com/questions/2035645/when-is-javascript-synchronous">https://stackoverflow.com/questions/2035645/when-is-javascript-synchronous</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1f6bc08" class="outline-3">
+<h3 id="org1f6bc08"><span class="section-number-3">3.27</span> What is event loop?</h3>
+<div class="outline-text-3" id="text-3-27">
+</div>
+<div id="outline-container-orgf2713b0" class="outline-4">
+<h4 id="orgf2713b0">the browser is basically wating for messages to be produced. messages are produced wneh an event occurs and there is an event listener attached to it.</h4>
+</div>
+<div id="outline-container-org31216b1" class="outline-4">
+<h4 id="org31216b1">What is the difference between call stack and task queue?</h4>
+<div class="outline-text-4" id="text-org31216b1">
+</div>
+<ul class="org-ul">
+<li><a id="org54ce6e5"></a>the call stack is composed of fucntions that have been called and their associated data. the task queue is a list of messages to be processed<br /></li>
+</ul>
+</div>
+<div id="outline-container-org035f2f9" class="outline-4">
+<h4 id="org035f2f9">source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop">https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop</a></h4>
+</div>
+</div>
+<div id="outline-container-orgcc11502" class="outline-3">
+<h3 id="orgcc11502"><span class="section-number-3">3.28</span> What are the differences between variables created using `let`, `var` or `const`?</h3>
+<div class="outline-text-3" id="text-3-28">
+</div>
+<div id="outline-container-orgf531d6d" class="outline-4">
+<h4 id="orgf531d6d">Const is immutable and block-scoped, let is block scoped and muteable. Var is function scoped/ can be global if declared outside of a function.</h4>
+<div class="outline-text-4" id="text-orgf531d6d">
+</div>
+<ul class="org-ul">
+<li><a id="orgda7cdc1"></a>source: <a href="https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e">https://dev.to/sarah_chima/var-let-and-const--whats-the-difference-69e</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5ddf6a6" class="outline-3">
+<h3 id="org5ddf6a6"><span class="section-number-3">3.29</span> What are the differences between ES6 class and ES5 function constructors?</h3>
+<div class="outline-text-3" id="text-3-29">
+</div>
+<div id="outline-container-org5c93741" class="outline-4">
+<h4 id="org5c93741">source: <a href="https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e">https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e</a></h4>
+</div>
+</div>
+<div id="outline-container-org19b7b06" class="outline-3">
+<h3 id="org19b7b06"><span class="section-number-3">3.30</span> Can you offer a use case for the new arrow `=&gt;` function syntax? How does this new syntax differ from other functions?</h3>
+<div class="outline-text-3" id="text-3-30">
+</div>
+<div id="outline-container-org1c300e1" class="outline-4">
+<h4 id="org1c300e1">before every function had its own this value based on the exectuion contex. arrow functions do not create their own this value. in the construction  of a class, this refers to the instance</h4>
+<div class="outline-text-4" id="text-org1c300e1">
+</div>
+<ul class="org-ul">
+<li><a id="org17078c1"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge82d992" class="outline-3">
+<h3 id="orge82d992"><span class="section-number-3">3.31</span> What advantage is there for using the arrow syntax for a method in a constructor?</h3>
+</div>
+<div id="outline-container-org4cd4302" class="outline-3">
+<h3 id="org4cd4302"><span class="section-number-3">3.32</span> What is the definition of a higher-order function?</h3>
+<div class="outline-text-3" id="text-3-32">
+</div>
+<div id="outline-container-org490036f" class="outline-4">
+<h4 id="org490036f">functions that takes a function as an argument, or returns a function</h4>
+<div class="outline-text-4" id="text-org490036f">
+</div>
+<ul class="org-ul">
+<li><a id="orgf60ad21"></a>source: <a href="https://medium.com/javascript-scene/higher-order-functions-composing-software-5365cf2cbe99">https://medium.com/javascript-scene/higher-order-functions-composing-software-5365cf2cbe99</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8c2139" class="outline-3">
+<h3 id="orgd8c2139"><span class="section-number-3">3.33</span> Can you give an example for destructuring an object or an array?</h3>
+<div class="outline-text-3" id="text-3-33">
+</div>
+<div id="outline-container-orgd5b321c" class="outline-4">
+<h4 id="orgd5b321c">const { butts, } = this.state.props</h4>
+<div class="outline-text-4" id="text-orgd5b321c">
+</div>
+<ul class="org-ul">
+<li><a id="org2bec312"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8cf712" class="outline-3">
+<h3 id="orgf8cf712"><span class="section-number-3">3.34</span> Can you give an example of generating a string with ES6 Template Literals?</h3>
+<div class="outline-text-3" id="text-3-34">
+</div>
+<div id="outline-container-org6b4a9fa" class="outline-4">
+<h4 id="org6b4a9fa">Var n = 9; str = `number ${n}`</h4>
+<div class="outline-text-4" id="text-org6b4a9fa">
+</div>
+<ul class="org-ul">
+<li><a id="orgdae2969"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b350f8" class="outline-3">
+<h3 id="org9b350f8"><span class="section-number-3">3.35</span> Can you give an example of a curry function and why this syntax offers an advantage?</h3>
+<div class="outline-text-3" id="text-3-35">
+</div>
+<div id="outline-container-orgebd3c9a" class="outline-4">
+<h4 id="orgebd3c9a">breaking a function that takes multiple arguements into a multiple functions that take 1 argument. event handling and async code.</h4>
+<div class="outline-text-4" id="text-orgebd3c9a">
+</div>
+<ul class="org-ul">
+<li><a id="org35a84e8"></a>source: <a href="https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe">https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2a11a0a" class="outline-3">
+<h3 id="org2a11a0a"><span class="section-number-3">3.36</span> What are the benefits of using `spread syntax` and how is it different from `rest syntax`?</h3>
+<div class="outline-text-3" id="text-3-36">
+</div>
+<div id="outline-container-org96ecdb4" class="outline-4">
+<h4 id="org96ecdb4">the spread operator is used to expand the properties of an object. rest is used to collect the remaining elements of an array.</h4>
+</div>
+<div id="outline-container-orgf1b3155" class="outline-4">
+<h4 id="orgf1b3155">spread: copying arrays, passing seperate elements of an array as function params, adding elements to an existing array.</h4>
+</div>
+<div id="outline-container-orgf92e341" class="outline-4">
+<h4 id="orgf92e341">rest: functions with dynamic numbers of params.</h4>
+</div>
+<div id="outline-container-org3659d1a" class="outline-4">
+<h4 id="org3659d1a">source: <a href="https://scotch.io/bar-talk/javascripts-three-dots-spread-vs-rest-operators543">https://scotch.io/bar-talk/javascripts-three-dots-spread-vs-rest-operators543</a></h4>
+</div>
+</div>
+<div id="outline-container-orgb1a9aa6" class="outline-3">
+<h3 id="orgb1a9aa6"><span class="section-number-3">3.37</span> How can you share code between files?</h3>
+<div class="outline-text-3" id="text-3-37">
+</div>
+<div id="outline-container-org9df92ff" class="outline-4">
+<h4 id="org9df92ff">exports. modules, globals</h4>
+<div class="outline-text-4" id="text-org9df92ff">
+</div>
+<ul class="org-ul">
+<li><a id="org14ea695"></a>source: <a href="https://stackoverflow.com/questions/31030013/sharing-js-functions-between-files-without-making-them-global-or-attaching-them">https://stackoverflow.com/questions/31030013/sharing-js-functions-between-files-without-making-them-global-or-attaching-them</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0da85e9" class="outline-3">
+<h3 id="org0da85e9"><span class="section-number-3">3.38</span> Why you might want to create static class members?</h3>
+<div class="outline-text-3" id="text-3-38">
+</div>
+<div id="outline-container-org26dd2af" class="outline-4">
+<h4 id="org26dd2af">To have a method that acts on the class itself, not the instance. Utility functions.</h4>
+<div class="outline-text-4" id="text-org26dd2af">
+</div>
+<ul class="org-ul">
+<li><a id="org3dd7ab9"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static</a><br /></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jake Bills</p>
-<p class="date">Created: 2019-09-29 Sun 15:22</p>
+<p class="date">Created: 2019-09-30 Mon 10:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
