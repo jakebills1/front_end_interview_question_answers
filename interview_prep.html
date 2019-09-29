@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-09-29 Sun 15:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Front End Interview Prep</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jake Bills" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Front End Interview Prep</h1>
+<div id="outline-container-org92ea6b7" class="outline-2">
+<h2 id="org92ea6b7"><span class="section-number-2">1</span> HTML</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4ca7d2f" class="outline-3">
+<h3 id="org4ca7d2f"><span class="section-number-3">1.1</span> What does a DOCTYPE do?</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org45e004b" class="outline-4">
+<h4 id="org45e004b">are optional, but more-or-less required for legacy compatibility reasons. if omitted, browsers may render the page in a way that is imcompatible with some specifications</h4>
+<div class="outline-text-4" id="text-org45e004b">
+</div>
+<ul class="org-ul">
+<li><a id="orga47a77b"></a>source: <a href="https://html.spec.whatwg.org/multipage/syntax.html#the-doctype">https://html.spec.whatwg.org/multipage/syntax.html#the-doctype</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3f002d1" class="outline-3">
+<h3 id="org3f002d1"><span class="section-number-3">1.2</span> How do you serve a page with content in multiple languages?</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org37005a5" class="outline-4">
+<h4 id="org37005a5">the lang tag can be used on any element. it should be fed a string containing a valid language tag. the lang tag on the &lt;html&gt; element is the default language for the page</h4>
+<div class="outline-text-4" id="text-org37005a5">
+</div>
+<ul class="org-ul">
+<li><a id="orgbc4456a"></a>source: <a href="https://www.w3.org/International/questions/qa-html-language-declarations">https://www.w3.org/International/questions/qa-html-language-declarations</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga430109" class="outline-3">
+<h3 id="orga430109"><span class="section-number-3">1.3</span> What kind of things must you be wary of when design or developing for multilingual sites?</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org033b222" class="outline-4">
+<h4 id="org033b222">setting the charset correctly. unicode 8 can accomadate many different languages. Make sure the font can handle non-Latin based languages. relative "wordiness" of different languages. direction of writing. date format. culture</h4>
+<div class="outline-text-4" id="text-org033b222">
+</div>
+<ul class="org-ul">
+<li><a id="orgdcde552"></a>source: <a href="https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708">https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28741c1" class="outline-3">
+<h3 id="org28741c1"><span class="section-number-3">1.4</span> What are data-attributes good for?</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orgbf88554" class="outline-4">
+<h4 id="orgbf88554">passing data from the dom to scripts. basically gives the html more power in a programming context</h4>
+<div class="outline-text-4" id="text-orgbf88554">
+</div>
+<ul class="org-ul">
+<li><a id="org4f35a24"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data">https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data</a>-*<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org996e1c0" class="outline-3">
+<h3 id="org996e1c0"><span class="section-number-3">1.5</span> Consider HTML5 as an open web platform. What are the building blocks of HTML5?</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgd3aec6d" class="outline-4">
+<h4 id="orgd3aec6d">semantics, connectivity, offline &amp; storage, multimedia, 2d/3d graphics &amp; effects, performance and integration, device access, styling</h4>
+<div class="outline-text-4" id="text-orgd3aec6d">
+</div>
+<ul class="org-ul">
+<li><a id="org300d1f6"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org184585a" class="outline-3">
+<h3 id="org184585a"><span class="section-number-3">1.6</span> Describe the difference between a cookie, sessionStorage and localStorage.</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-orgf5dc07e" class="outline-4">
+<h4 id="orgf5dc07e">Session storage is cleared when the session expires. Cookies = server-side, local storage = client side</h4>
+<div class="outline-text-4" id="text-orgf5dc07e">
+</div>
+<ul class="org-ul">
+<li><a id="orgf0b41f5"></a>source: <a href="https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies">https://stackoverflow.com/questions/19867599/what-is-the-difference-between-localstorage-sessionstorage-session-and-cookies</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga7e54fa" class="outline-3">
+<h3 id="orga7e54fa"><span class="section-number-3">1.7</span> Describe the difference between &lt;script&gt;, &lt;script async&gt; and &lt;script defer&gt;.</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org1812d4a" class="outline-4">
+<h4 id="org1812d4a">When a browser is loading html and it encounters a script tag, the rendering stops until the execution of the script is done. Async and defer are ways of telling the browser to load the page content before scripts load</h4>
+<div class="outline-text-4" id="text-org1812d4a">
+</div>
+<ul class="org-ul">
+<li><a id="orgb412c27"></a>source: <a href="https://javascript.info/script-async-defer">https://javascript.info/script-async-defer</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d1edfa" class="outline-3">
+<h3 id="org1d1edfa"><span class="section-number-3">1.8</span> Why is it generally a good idea to position CSS &lt;link&gt;s between &lt;head&gt;&lt;/head&gt; and JS &lt;script&gt;s just before &lt;/body&gt;? Do you know any exceptions?</h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org40d9324" class="outline-4">
+<h4 id="org40d9324">The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue.</h4>
+<div class="outline-text-4" id="text-org40d9324">
+</div>
+<ul class="org-ul">
+<li><a id="orgb20e80a"></a>source: <a href="https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid">https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf53466f" class="outline-3">
+<h3 id="orgf53466f"><span class="section-number-3">1.9</span> What is progressive rendering?</h3>
+<div class="outline-text-3" id="text-1-9">
+</div>
+<div id="outline-container-org9d84cb2" class="outline-4">
+<h4 id="org9d84cb2">Prioritizing loading certain elements of the site first as to give the user the experience of fast loading. Lazy loading, above the fold rendering</h4>
+<div class="outline-text-4" id="text-org9d84cb2">
+</div>
+<ul class="org-ul">
+<li><a id="org4b7a76f"></a>source: <a href="https://stackoverflow.com/questions/33651166/what-is-progressive-rendering">https://stackoverflow.com/questions/33651166/what-is-progressive-rendering</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba5e489" class="outline-3">
+<h3 id="orgba5e489"><span class="section-number-3">1.10</span> Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.</h3>
+<div class="outline-text-3" id="text-1-10">
+</div>
+<div id="outline-container-org55700c1" class="outline-4">
+<h4 id="org55700c1">Provides a set of src’s for an image and the width of the image. It selects the first true option in sizes for the viewport</h4>
+<div class="outline-text-4" id="text-org55700c1">
+</div>
+<ul class="org-ul">
+<li><a id="org7123c8a"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org26f6ab8" class="outline-3">
+<h3 id="org26f6ab8"><span class="section-number-3">1.11</span> Have you used different HTML templating languages before?</h3>
+<div class="outline-text-3" id="text-1-11">
+</div>
+<div id="outline-container-orga054098" class="outline-4">
+<h4 id="orga054098">( way of introducing programming concepts to html, supporting dynamic content ) rails views?</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcb540af" class="outline-2">
+<h2 id="orgcb540af"><span class="section-number-2">2</span> CSS</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org92f857d" class="outline-3">
+<h3 id="org92f857d"><span class="section-number-3">2.1</span> What is CSS selector specificity and how does it work?</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb3ba9de" class="outline-4">
+<h4 id="orgb3ba9de">assigns a value to selectors based on how general or specific. ( in order of specificity: type selectors, class selectors, id selectors )</h4>
+<div class="outline-text-4" id="text-orgb3ba9de">
+</div>
+<ul class="org-ul">
+<li><a id="org0d5e635"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79a674a" class="outline-3">
+<h3 id="org79a674a"><span class="section-number-3">2.2</span> What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgc4e3d7c" class="outline-4">
+<h4 id="orgc4e3d7c">Css reset removes all built in browser styling. Normalize tries to standardize across browsers. The latter, because a lot of built in styles are pretty useful.</h4>
+<div class="outline-text-4" id="text-orgc4e3d7c">
+</div>
+<ul class="org-ul">
+<li><a id="org520d670"></a>source: <a href="https://pineco.de/a-brief-about-css-reset-and-normalize/">https://pineco.de/a-brief-about-css-reset-and-normalize/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd516840" class="outline-3">
+<h3 id="orgd516840"><span class="section-number-3">2.3</span> Describe Floats and how they work.</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org294f8ac" class="outline-4">
+<h4 id="org294f8ac">Allows an element to float in its container. An image with a float right will appear to the right of text in its container.</h4>
+<div class="outline-text-4" id="text-org294f8ac">
+</div>
+<ul class="org-ul">
+<li><a id="org315b723"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">https://developer.mozilla.org/en-US/docs/Web/CSS/float</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgebaf688" class="outline-3">
+<h3 id="orgebaf688"><span class="section-number-3">2.4</span> Describe z-index and how stacking context is formed.</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org5318c1b" class="outline-4">
+<h4 id="org5318c1b">They determine the order in which stacking elements are rendered. Larger z values are rendered before smaller ones</h4>
+<div class="outline-text-4" id="text-org5318c1b">
+</div>
+<ul class="org-ul">
+<li><a id="org36268cb"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">https://developer.mozilla.org/en-US/docs/Web/CSS/z-index</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org31b6f72" class="outline-3">
+<h3 id="org31b6f72"><span class="section-number-3">2.5</span> Describe BFC (Block Formatting Context) and how it works.</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-org92e1cb4" class="outline-4">
+<h4 id="org92e1cb4">a bfc is created by a container thats contents will conform to the box model. Use cases: containing the overflow when a floated element is taller than its containing div. dealing with margin collapsing</h4>
+<div class="outline-text-4" id="text-org92e1cb4">
+</div>
+<ul class="org-ul">
+<li><a id="org6d64a0a"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org115a6a9" class="outline-3">
+<h3 id="org115a6a9"><span class="section-number-3">2.6</span> What are the various clearing techniques and which is appropriate for what context?</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-org4d5c4fd" class="outline-4">
+<h4 id="org4d5c4fd">Clearing: if two preceding elements are floated left and right, clearing the preceding element makes sure it takes up the space below the two  elements</h4>
+<div class="outline-text-4" id="text-org4d5c4fd">
+</div>
+<ul class="org-ul">
+<li><a id="org83ce294"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">https://developer.mozilla.org/en-US/docs/Web/CSS/clear</a><br /></li>
+</ul>
+</div>
+<div id="outline-container-org438c74e" class="outline-4">
+<h4 id="org438c74e">techniques: empty div to clear left and right floated elements. overflow on parent element. using a psuedo element :after the elements that need to be cleared</h4>
+<div class="outline-text-4" id="text-org438c74e">
+</div>
+<ul class="org-ul">
+<li><a id="org650c922"></a>source: <a href="https://css-tricks.com/all-about-floats/">https://css-tricks.com/all-about-floats/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2928049" class="outline-3">
+<h3 id="org2928049"><span class="section-number-3">2.7</span> How would you approach fixing browser-specific styling issues?</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-org7fd55a9" class="outline-4">
+<h4 id="org7fd55a9">Not use unsupported features in a way that adds too much to the presentation, feature queries, writing older css first, then having a feature test, and overrideing the css it the browser passes the feature test. Fallback for css rules: write most supported rule first, then newer css feature. older browsers will just skip a rule that can't be rendered</h4>
+<div class="outline-text-4" id="text-org7fd55a9">
+</div>
+<ul class="org-ul">
+<li><a id="org19e7c25"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org657550e" class="outline-3">
+<h3 id="org657550e"><span class="section-number-3">2.8</span> How do you serve your pages for feature-constrained browsers?</h3>
+<div class="outline-text-3" id="text-2-8">
+</div>
+<div id="outline-container-orgac882f9" class="outline-4">
+<h4 id="orgac882f9">making sure the base of it works for any browser / does not contain features that, if broken, compromise useability, rather when working enhance the UX.</h4>
+</div>
+<div id="outline-container-org523e341" class="outline-4">
+<h4 id="org523e341">What techniques/processes do you use?</h4>
+<div class="outline-text-4" id="text-org523e341">
+</div>
+<ul class="org-ul">
+<li><a id="orgd2ea844"></a>@supports ?<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8255da" class="outline-3">
+<h3 id="orgf8255da"><span class="section-number-3">2.9</span> What are the different ways to visually hide content (and make it available only for screen readers)?</h3>
+<div class="outline-text-3" id="text-2-9">
+</div>
+<div id="outline-container-org997493a" class="outline-4">
+<h4 id="org997493a">Using absolute positioning to hide it off screen</h4>
+<div class="outline-text-4" id="text-org997493a">
+</div>
+<ul class="org-ul">
+<li><a id="orgbe85c71"></a>source: <a href="https://zellwk.com/blog/hide-content-accessibly/">https://zellwk.com/blog/hide-content-accessibly/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org472a3c3" class="outline-3">
+<h3 id="org472a3c3"><span class="section-number-3">2.10</span> Have you ever used a grid system, and if so, what do you prefer?</h3>
+</div>
+<div id="outline-container-org703a415" class="outline-3">
+<h3 id="org703a415"><span class="section-number-3">2.11</span> Have you used or implemented media queries or mobile specific layouts/CSS?</h3>
+</div>
+<div id="outline-container-org9b2249a" class="outline-3">
+<h3 id="org9b2249a"><span class="section-number-3">2.12</span> Are you familiar with styling SVG?</h3>
+</div>
+<div id="outline-container-orgcc1f5c9" class="outline-3">
+<h3 id="orgcc1f5c9"><span class="section-number-3">2.13</span> Can you give an example of an `@media` property other than `screen`?</h3>
+<div class="outline-text-3" id="text-2-13">
+</div>
+<div id="outline-container-org58568b9" class="outline-4">
+<h4 id="org58568b9">all, print, speech</h4>
+<div class="outline-text-4" id="text-org58568b9">
+</div>
+<ul class="org-ul">
+<li><a id="org75e633d"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org04fb35e" class="outline-3">
+<h3 id="org04fb35e"><span class="section-number-3">2.14</span> What are some of the "gotchas" for writing efficient CSS?</h3>
+<div class="outline-text-3" id="text-2-14">
+</div>
+<div id="outline-container-org69bb380" class="outline-4">
+<h4 id="org69bb380">avoid key selectors( the rightmost selector in a compound selector statement) that match a large number of elements ( because the browser will first match the key selector. the key selector should be a class or an id not a type ). use class and id selectors instead of type selectors. avoid redundancy. no universal selector</h4>
+<div class="outline-text-4" id="text-org69bb380">
+</div>
+<ul class="org-ul">
+<li><a id="orgb974950"></a>source: <a href="https://css-tricks.com/efficiently-rendering-css/">https://css-tricks.com/efficiently-rendering-css/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org879c265" class="outline-3">
+<h3 id="org879c265"><span class="section-number-3">2.15</span> What are the advantages/disadvantages of using CSS preprocessors?</h3>
+<div class="outline-text-3" id="text-2-15">
+</div>
+<div id="outline-container-orgca2b2a3" class="outline-4">
+<h4 id="orgca2b2a3">Advantages: more DRY. nesting. mixins</h4>
+</div>
+<div id="outline-container-org30f5472" class="outline-4">
+<h4 id="org30f5472">disadvantages: too much nesting. larger css file. performance.</h4>
+</div>
+<div id="outline-container-orga607bc7" class="outline-4">
+<h4 id="orga607bc7">source: <a href="https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e">https://www.reddit.com/r/Frontend/comments/3sntqe/what_are_the_pros_and_cons_of_css_preprocessors/?st=k15gxthq&amp;sh=43a0f54e</a></h4>
+</div>
+</div>
+<div id="outline-container-org725344c" class="outline-3">
+<h3 id="org725344c"><span class="section-number-3">2.16</span> How would you implement a web design comp that uses non-standard fonts?</h3>
+</div>
+<div id="outline-container-org073fdd7" class="outline-3">
+<h3 id="org073fdd7"><span class="section-number-3">2.17</span> Explain how a browser determines what elements match a CSS selector.</h3>
+<div class="outline-text-3" id="text-2-17">
+</div>
+<div id="outline-container-org467da01" class="outline-4">
+<h4 id="org467da01">Before rendering any content it makes the CSS object model ( CSSOM ) this is a tree structure much like the dom, that the browser combines with the dom to make a render tree. This is basically the element, plus the styles. Layout is next, then paint, where actual pixels show up on the page</h4>
+<div class="outline-text-4" id="text-org467da01">
+</div>
+<ul class="org-ul">
+<li><a id="orgc521e73"></a>source: <a href="https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/">https://blog.logrocket.com/how-css-works-parsing-painting-css-in-the-critical-rendering-path-b3ee290762d3/</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd50513e" class="outline-3">
+<h3 id="orgd50513e"><span class="section-number-3">2.18</span> Describe pseudo-elements and discuss what they are used for.</h3>
+<div class="outline-text-3" id="text-2-18">
+</div>
+<div id="outline-container-org0679ec2" class="outline-4">
+<h4 id="org0679ec2">used after a selector to style only 1 part of the selected element. ex p::first-line will apply to the first line of a p tag.</h4>
+</div>
+<div id="outline-container-org33e32f2" class="outline-4">
+<h4 id="org33e32f2">use cases: drop caps. inserting content without adding elements to html</h4>
+<div class="outline-text-4" id="text-org33e32f2">
+</div>
+<ul class="org-ul">
+<li><a id="org029ff5b"></a>source: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements</a><br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf8520c" class="outline-3">
+<h3 id="orgbf8520c"><span class="section-number-3">2.19</span> Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.</h3>
+</div>
+<div id="outline-container-orgdb756a6" class="outline-3">
+<h3 id="orgdb756a6"><span class="section-number-3">2.20</span> What does ```* { box-sizing: border-box; }``` do? What are its advantages?</h3>
+</div>
+<div id="outline-container-org9c94f14" class="outline-3">
+<h3 id="org9c94f14"><span class="section-number-3">2.21</span> What is the CSS `display` property and can you give a few examples of its use?</h3>
+</div>
+<div id="outline-container-org1e657c1" class="outline-3">
+<h3 id="org1e657c1"><span class="section-number-3">2.22</span> What's the difference between inline and inline-block?</h3>
+</div>
+<div id="outline-container-org0242d06" class="outline-3">
+<h3 id="org0242d06"><span class="section-number-3">2.23</span> What's the difference between the "nth-of-type()" and "nth-child()" selectors?</h3>
+</div>
+<div id="outline-container-orgc5b05b5" class="outline-3">
+<h3 id="orgc5b05b5"><span class="section-number-3">2.24</span> What's the difference between a relative, fixed, absolute and statically positioned element?</h3>
+</div>
+<div id="outline-container-orgb2d00be" class="outline-3">
+<h3 id="orgb2d00be"><span class="section-number-3">2.25</span> What existing CSS frameworks have you used locally, or in production? How would you change/improve them?</h3>
+</div>
+<div id="outline-container-org44c74a5" class="outline-3">
+<h3 id="org44c74a5"><span class="section-number-3">2.26</span> Have you used CSS Grid?</h3>
+</div>
+<div id="outline-container-orgf55d0b9" class="outline-3">
+<h3 id="orgf55d0b9"><span class="section-number-3">2.27</span> Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?</h3>
+</div>
+<div id="outline-container-org5396a35" class="outline-3">
+<h3 id="org5396a35"><span class="section-number-3">2.28</span> Have you ever worked with retina graphics? If so, when and what techniques did you use?</h3>
+</div>
+<div id="outline-container-org9ce0581" class="outline-3">
+<h3 id="org9ce0581"><span class="section-number-3">2.29</span> Is there any reason you'd want to use `translate()` instead of <b>absolute positioning</b>, or vice-versa? And why?</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jake Bills</p>
+<p class="date">Created: 2019-09-29 Sun 15:22</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
