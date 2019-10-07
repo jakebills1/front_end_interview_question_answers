@@ -23,7 +23,7 @@
 *** When a browser is loading html and it encounters a script tag, the rendering stops until the execution of the script is done. Async and defer are ways of telling the browser to load the page content before scripts load
 **** source: https://javascript.info/script-async-defer
 ** Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
-*** The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue. 
+*** The browser loads in the order of the page, so it should load html/css before js. If you are using a css library with a jquery dependency. On modern browsers, speculative loading is used to let the browser download elements further in the page before the script is done, making this  less of an issue.  Part of specification, and helps progressive rendering
 **** source: https://stackoverflow.com/questions/9271276/is-the-recommendation-to-include-css-before-javascript-invalid
 ** What is progressive rendering?
 *** Prioritizing loading certain elements of the site first as to give the user the experience of fast loading. Lazy loading, above the fold rendering
@@ -239,5 +239,52 @@
 ** Why you might want to create static class members?
 *** To have a method that acts on the class itself, not the instance. Utility functions. 
 **** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
-
+** What is the reduce function?  
+*** a function that iterates over an array, executing a callback function, to reduce the array to a single value. the second argument is the starting value for the first argument to the callback function, the accumulator. the second arg to the callback is the current value in the array
+**** source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+** React: What is a ref?
+*** a way to imperatively affect the DOM outside of the normal parent-child dataflow in react. They can only be used on class components
+* General
+** What did you learn yesterday/this week?
+*** actual specs on html/css/javascript/how Redux works
+** What excites or interests you about coding?
+*** problem solving. making computers do things. power. 
+** What is a recent technical challenge you experienced and how did you solve it?
+*** installing babel in a node environment. beforehand I would have avoided it
+** When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?
+*** cloud served images instead of static assets. 
+** Can you describe some SEO best practices or techniques you have used lately?
+** Can you explain any common techniques or recent issues solved in regards to front-end security? 
+*** validating inputs
+** What actions have you personally taken on recent projects to increase maintainability of your code?
+*** moving styles to one place. removing pixels
+** Talk about your preferred development environment.
+*** vs code with vim bindings
+** Which version control systems are you familiar with?
+*** git 
+** Can you describe your workflow when you create a web page?
+*** write the backend up to the point of having the proper endpoints to hit, even if they don't have the right data. 
+** If you have 5 different stylesheets, how would you best integrate them into the site?
+** Can you describe the difference between progressive enhancement and graceful degradation?
+** How would you optimize a website's assets/resources?
+*** lazy loading, cloud server. 
+** How many resources will a browser download from a given domain at a time?
+  * What are the exceptions?
+** Name 3 ways to decrease page load (perceived or actual load time).
+** If you jumped on a project and they used tabs and you used spaces, what would you do?
+** Describe how you would create a simple slideshow page.
+*** 
+** If you could master one technology this year, what would it be?
+** Explain the importance of standards and standards bodies.
+** What is Flash of Unstyled Content? How do you avoid FOUC?
+** Explain what ARIA and screenreaders are, and how to make a website accessible.
+*** aria are tags that are used to define the semantics of certain elements more clearly. screenreaders parse the availabe text on a website and read it to visually disabled people. Using alt tags on images
+** Explain some of the pros and cons for CSS animations versus JavaScript animations.
+*** css animations are easier but less powerful
+** What does CORS stand for and what issue does it address?
+*** cross origin resource sharing. webpages on different domains interacting with each other. 
+** How did you handle a disagreement with your boss or your collaborator?
+*** try to explain my rationale for thinking a certain thing, but also try just as hard to understand their motivation in thinking a certain way
+** What resources do you use to learn about the latest in front end development and design?
+*** reddit, medium, hacker news, 
   
